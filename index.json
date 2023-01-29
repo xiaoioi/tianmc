@@ -26,6 +26,11 @@
                 "icon": "insert_drive_file",
                 "name": "文档",
                 "href": "https://xiaoioi.github.io/TcsCraftdocs"
+            },
+            {
+                "icon": "favorite",
+                "name": "赞助",
+                "href": "/money.html"
             }
         ]
     }
