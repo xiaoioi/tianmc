@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tian 文档</title>
+    <link href="/dist/css/lightgallery.css" rel="stylesheet">
+    <meta http-equiv="Content-Language" contect="zh-CN">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    </script>
+    <!-- MDUI -->
+    <link rel="stylesheet" href="/css/mdui.min.css">
+    <script src="/js/mdui.min.js"></script>
+    <link href="../dist/css/lightgallery.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/theme.css">
+    <link href="css/video-js.min.css" rel="stylesheet">
+    <!-- Vue -->
+    <script src="/js/vue.global.prod.js"></script>
+    <style>
+        .mdui-shadow-3 {
+            border-radius: 8px;
+            margin-right: 8px;
+            margin-top: 8px;
+        }
+
+        @font-face {
+            font-family: "MiSans";
+            font-weight: 400;
+            src: url("MiSans.ttf") format("ttf");
+            font-display: swap;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js"></script>
+</head>
+
+<body class="mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
+    <!-- 这是Vue的 -->
+    <div id="app">
+        <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
+            <div class="mdui-toolbar mdui-color-theme-50">
+                <a class="mdui-btn mdui-btn-icon waves-circle toolbar-btn" mdui-drawer="{target: '#drawer', swipe: true}"> <i class="mdui-icon material-icons">menu</i> </a>
+                <span class="mdui-typo-title">Tian</span> <a class="mdui-typo-headline" href="index.html"></a>
+                <div class="mdui-toolbar-spacer"></div>
+            </div>
+        </header>
+        <div class="mdui-drawer mdui-color-theme-50 mdui-drawer-close mdui-shadow-0" id="drawer">
+            <!-- 顶部图片 -->
+            <p></p>
+            <div class="chtb">
+                <img :src="config?config.drawer.header:null" style="width: 100%;" :style="{opacity: config?1:0}">
+            </div>
+            <p></p>
+            <ul class="mdui-list" mdui-collapse="{accordion: true}" style="padding: 8px;">
+                <!-- 侧滑布局 -->
+                <li v-if="config &amp;&amp; config.drawer" v-for="item in config.drawer.items" class="mdui-collapse-item mdui-collapse-item">
+                    <a :href="item.href" class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">{{item.icon}}</i>
+                        <div class="mdui-list-item-content">{{item.name}}</div>
+                        <i v-if="item.subItems" class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                    </a>
+                    <ul v-if="item.subItems" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                        <a v-for="subItem in item.subItems" :href="subItem.href" class="waves-block radius">
+                            <li class="mdui-list-item mdui-ripple" :mdui-dalog="subItem.dialog">{{subItem.name}}</li>
+                        </a>
+                    </ul>
+                </li>
+                <script defer src="https://busuanzi.9420.ltd/js"></script>
+                <span style="position:fixed;bottom:0;" class="mdui-center mdui-typo-body-2-opacity">
+                    <pre>Powered by MDUI & Xiaoioi
+本站总访客数 <span id="busuanzi_site_uv"></span> 人
+本站总访问量 <span id="busuanzi_site_pv"></span> 次                </pre>
+                </span>
+            </ul>
+        </div>
+    </div>
+    <div class="mdui-typo mdui-container">
+        <h1 id="开始游玩">开始游玩</h1>
+        <h2 id="手机">手机</h2>
+        <ol>
+            <li>打开MC基岩版</li>
+            <li>点击游戏 服务器 添加服务器</li>
+            <li>输入服务器的地址:</li>
+            <li>开始游玩吧</li>
+        </ol>
+        <h2 id="电脑">电脑</h2>
+        <h3 id="uwp">UWP</h3>
+        <ol>
+            <li>打开MC基岩版</li>
+            <li>点击游戏 服务器 添加服务器</li>
+            <li>输入服务器的地址</li>
+            <li>开始游玩吧</li>
+        </ol>
+        <h3 id="java">JAVA</h3>
+        <p>安装教程:【<a href="https://b23.tv/ndCCKqG">保姆级HMCL启动器教程，稍微懂点电脑就能看懂！-哔哩哔哩</a>】 </p>
+        <ol>
+            <li>打开MCJAVA版</li>
+            <li>点击多人游戏 添加服务器</li>
+            <li>输入服务器的地址:</li>
+            <li>注册</li>
+            <li>开始游玩吧</li>
+        </ol>
+        <h3 id="ip">IP</h3>
+        请忽略上面的结果
+
+        <p>IP:k2.getmc.cn</p>
+        <p>端口:15292</p>
+        <hr>
+        创造服
+
+
+        <p>地址：k1.getmc.cn</p>
+        <p>端口：15452</p>
+        <hr>
+        互通服 不删档测试
+
+
+        <p>mcp7.rhymc.com</p>
+        <p>端口:1141</p>
+        <hr>
+
+</body>
+
+</html>
