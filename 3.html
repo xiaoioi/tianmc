@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>Van家作品 - Tian</title>
+    <link href="/dist/css/lightgallery.css" rel="stylesheet">
+    <meta http-equiv="Content-Language" contect="zh-CN">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <script src="js/zh-CN.js">
+    </script>
+    <!-- MDUI -->
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <link href="../dist/css/lightgallery.css" rel="stylesheet">
+    <script src="js/mdui.min.js"></script>
+    <link href="../dist/css/lightgallery.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link href="css/video-js.min.css" rel="stylesheet">
+    <!-- Vue -->
+    <script src="js/vue.global.prod.js"></script>
+    <style>
+        .mdui-shadow-3 {
+            border-radius: 8px;
+            margin-right: 8px;
+            margin-top: 8px;
+        }
+
+        @font-face {
+            font-family: "MiSans";
+            font-weight: 400;
+            src: url("MiSans.ttf") format("ttf");
+            font-display: swap;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js"></script>
+</head>
+
+<body class="mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
+    <!-- 这是Vue的 -->
+    <div id="app">
+        <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
+            <div class="mdui-toolbar mdui-color-theme-50">
+                <a class="mdui-btn mdui-btn-icon waves-circle toolbar-btn" mdui-drawer="{target: '#drawer', swipe: true}"> <i class="mdui-icon material-icons">menu</i> </a>
+                <span class="mdui-typo-title">Tian</span> <a class="mdui-typo-headline" href="index.html"></a>
+                <div class="mdui-toolbar-spacer"></div>
+            </div>
+            <div class="mdui-color-theme-50" style="border-radius: 0 0 20px 20px;">
+                <!--<div class="mdui-container">
+                    <div class="mdui-typo-subheading">甜瓜の生存服成立于2021年10月29日，是一个完美的我的世界基岩版养老生存服</div>
+                    <p></p>
+                    <a href="//xiaoioi.github.io/TcsCraftdocs/start/#ip" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-light-blue-300"><i class="mdui-icon material-icons">play_circle_outline</i> 开始游戏</a>
+                    <a href="//xiaoioi.github.io/TcsCraftdocs/" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-light-blue-300"><i class="mdui-icon material-icons">insert_drive_file</i> 帮助文档</a>
+                    <a class="mdui-btn mdui-btn-icon mdui-ripple mdui-color-theme-accent mdui-color-light-blue-300" mdui-dialog="{target: '#bilibili'}"><img class="mdui-icon" src="img/video.svg"></a>
+                    <p></p>
+                </div>
+            </div>-->
+                <p></p>
+        </header>
+        <div class="mdui-dialog" id="bilibili">
+            <div class="mdui-dialog-title">BiliBili 视频</div>
+            <div class="mdui-dialog-content">There is nothing here.</div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close=""><i class="mdui-icon material-icons">close</i></button>
+            </div>
+        </div>
+        <div class="mdui-drawer mdui-color-theme-50 mdui-drawer-close mdui-shadow-0" id="drawer">
+            <!-- 顶部图片 -->
+            <p></p>
+            <div class="chtb">
+                <img :src="config?config.drawer.header:null" style="width: 100%;" :style="{opacity: config?1:0}">
+            </div>
+            <p></p>
+            <ul class="mdui-list" mdui-collapse="{accordion: true}" style="padding: 8px;">
+                <!-- 侧滑布局 -->
+                <li v-if="config &amp;&amp; config.drawer" v-for="item in config.drawer.items" class="mdui-collapse-item mdui-collapse-item">
+                    <a :href="item.href" class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">{{item.icon}}</i>
+                        <div class="mdui-list-item-content">{{item.name}}</div>
+                        <i v-if="item.subItems" class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                    </a>
+                    <ul v-if="item.subItems" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                        <a v-for="subItem in item.subItems" :href="subItem.href" class="waves-block radius">
+                            <li class="mdui-list-item mdui-ripple" :mdui-dalog="subItem.dialog">{{subItem.name}}</li>
+                        </a>
+                    </ul>
+                </li>
+                <script defer src="https://busuanzi.9420.ltd/js"></script>
+                <span style="position:fixed;bottom:0;" class="mdui-center mdui-typo-body-2-opacity">
+                    <pre>Powered by MDUI & Xiaoioi
+本站总访客数 <span id="busuanzi_site_uv"></span> 人
+本站总访问量 <span id="busuanzi_site_pv"></span> 次                </pre>
+                </span>
+            </ul>
+        </div>
+    </div>
+    <div class="mdui-container" style="padding-top:;">
+        <div class="mdui-content mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-grid-list" align="center">
+            <div>
+                <div class="mdui-col-xs-6" id="lightgallery">
+                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/1.jpeg" src="img/van/1.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/2.jpeg" src="img/van/2.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/3.jpeg" src="img/van/3.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/4.jpeg" src="img/van/4.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/5.jpeg" src="img/van/5.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                </div>
+                <div class="mdui-col-xs-6" id="lightgallervy">
+                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/6.jpeg" src="img/van/6.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/7.jpeg" src="img/van/7.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/8.jpeg" src="img/van/8.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/9.jpeg" src="img/van/9.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/10.jpeg" src="img/van/10.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                </div>
+            </div>
+        </div>
+
+        <i align="center" class="mdui-icon material-icons mdui-center mdui-typo-display-2-opacity">help_outline</i>
+        <h2 align="center">申请投稿</h2>
+        <h3 align="center">QQ群 - 群相册</h3>
+    </div>
+</body>
+<script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+<script src="../demo/js/lg-rotate.js"></script>
+<script>
+    lightGallery(document.getElementById('lightgallery'));
+    lightGallery(document.getElementById('lightgallervy'));
+</script>
+
+</html>
