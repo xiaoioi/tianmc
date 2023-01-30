@@ -1,5 +1,5 @@
 const { createApp, ref, watchEffect } = Vue
-const APPS_URL = "index.json"
+const APPS_URL = "./index.json"
 app = createApp({
     data() {
         const config = ref(null)
