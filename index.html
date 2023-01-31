@@ -35,6 +35,10 @@
             src: url("MiSans.ttf") format("ttf");
             font-display: swap;
         }
+        
+        .content-about img {
+            width:90px;
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/index.js"></script>
@@ -108,8 +112,8 @@
             <a href="//xiaoioi.github.io/TcsCraftdocs/" class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-color-light-blue-500"><i class="mdui-icon material-icons">insert_drive_file</i> 帮助文档</a>
             <p></p>
             <a href="/money.html" class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-color-red-500"><i class="mdui-icon material-icons">favorite</i> 赞助</a>
-            <a href="https://jq.qq.com/?_wv=1027&k=x6tTBbM" class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-color-blue-600"><i class="mdui-icon material-icons">group</i> QQ群聊</a>
-        </div>
+            <a href="https://jq.qq.com/?_wv=1027&k=x6tTBbM" class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-color-blue-600"><span class="mdui-icon mdi mdi-qqchat"></span> QQ群聊</a>
+        </div><span class="mdi mdi-qqchat"></span>
         <div class="mdui-content mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-2 mdui-grid-list" align="center">
             <div class="mdui-container mdui-col" align="center">
                 <div class="content-text">
@@ -128,10 +132,12 @@
                 </div>
             </div>
         </div>
-        <div class="mdui-row content-text ">
+        <div class="mdui-row">
             <div class="mcui-dialog mdui-col-md-6 mdui-center">
-                <h4 class="mdui-text-color-blue" align="center">关于我们</h4>
-                <div class="mdui-row-xs-3 mdui-center content-about">
+                <div class="mdui-m-y-1 mcui-alert">
+                    <div class="mdui-text-color-blue" align="center">关于我们</div>
+                </div>
+                <div class="mcui-alert mdui-row-xs-3 mdui-center content-about">
                     <div class="mdui-col mdui-p-a-0">
                         <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_1" src="//q1.qlogo.cn/g?b=qq&amp;nk=1789055955&amp;s=100">
                         <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_1">甜瓜</h4>
@@ -185,17 +191,15 @@
                         </div>
                     </a>
                 </div>
-                <a href="//www.mzwbbs.com">
-                    <img class="mdui-img-fluid mdui-shadow-3 mdui-color-green-a700" src="img/mzwbbs.svg"></a>
             </div>
             <p></p>
             <div class="mcui-dialog mdui-col-md-6 mdui-center">
-                <div class="mdui-p-b-1 ">
-                    <h4 class="mdui-text-color-blue" align="center">数据</h4>
+                <div class="mdui-m-y-1 mcui-alert">
+                    <div class="mdui-text-color-blue" align="center">数据</div>
                 </div>
-                <div class="mdui-row-xs-2">
+                <div class="mcui-alert">
                     <div class="mdui-row mdui-center" align="center">
-                        <div class="mdui-p-t-1 mdui-col-xs-6 mdui-chol-md-12">
+                        <div class="mdui-p-t-1 mdui-col-xs-6">
                             <div class="mdui-typo-title">玩家总数</div>
                             <div class="mdui-typo-subheading">1000+</div>
                             <div class="mdui-typo-caption">* 三周目 424人 (22-1-14)</div>
@@ -209,8 +213,8 @@
                 </div>
             </div>
             <div style="padding-bottom:5px;" class="mcui-dialog mdui-col-xs-12 mdui-col-md-6 mdui-center">
-                <div class="mdui-p-b-1 ">
-                    <h4 class="mdui-text-color-blue" align="center">联系我们</h4>
+                <div class="mdui-m-y-1 mcui-alert">
+                    <div class="mdui-text-color-blue" align="center">联系我们</div>
                 </div>
                 <div class="mdui-row-xs-2">
                     <div class="mdui-row mdui-center">
@@ -225,6 +229,7 @@
                     </div>
                 </div>
             </div>
+                <a href="//www.mzwbbs.com"><img class="mdui-img-fluid mdui-center mcui-alert" align="center" src="img/mzwbbs.svg"></a>
         </div>
     </div>
 
