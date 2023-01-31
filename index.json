@@ -28,6 +28,11 @@
                 "href": "https://xiaoioi.github.io/TcsCraftdocs"
             },
             {
+                "icon": "shop",
+                "name": "付费商店",
+                "href": "/shop.html"
+            },
+            {
                 "icon": "favorite",
                 "name": "赞助",
                 "href": "/money.html"

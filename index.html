@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>Tian</title>
+    <link rel="stylesheet" type="text/css" href="https://mcbbk.blmcpia.com/mcui/css/mcui.css">
+    <link rel="stylesheet" type="text/css" href="https://mcbbk.blmcpia.com/mcui/css/font.mcui.min.css">
+    <link rel="stylesheet" type="text/css" href="https://mcbbk.blmcpia.com/mcui/css/zit.css">
     <link href="/dist/css/lightgallery.css" rel="stylesheet">
     <meta http-equiv="Content-Language" contect="zh-CN">
     <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -17,6 +20,8 @@
     <link href="css/video-js.min.css" rel="stylesheet">
     <!-- Vue -->
     <script src="js/vue.global.prod.js"></script>
+
+    <script src="//unpkg.com/@mdi/font@7.1.96/css/materialdesignicons.min.css"></script>
     <style>
         .mdui-shadow-3 {
             border-radius: 8px;
@@ -35,7 +40,7 @@
     <script src="js/index.js"></script>
 </head>
 
-<body class="mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
+<body class="mcui-background-woolg mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
     <!-- 这是Vue的 -->
     <div id="app">
         <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
@@ -86,25 +91,27 @@
                 </li>
                 <script defer src="https://busuanzi.9420.ltd/js"></script>
                 <span style="position:fixed;bottom:0;" class="mdui-center mdui-typo-body-2-opacity">
-                    <pre>Powered by MDUI & Xiaoioi
+                    <pre>Powered by MDUI & MCUI
 本站总访客数 <span id="busuanzi_site_uv"></span> 人
 本站总访问量 <span id="busuanzi_site_pv"></span> 次                </pre>
                 </span>
             </ul>
         </div>
     </div>
-    <div class="mdui-container" style="padding-top:;">
+
+    <div class="mdui-container " style="padding-top:;">
         <div align="center">
             <h2 class="mdui-typo texte">甜瓜の生存服成立于2021年10月29日，是一个比较完美的我的世界基岩版养老生存服</h2>
-            <a href="/lang/zh-hk" class="mdui-typo texte{">繁体中文</a> <p></p>
+            <a href="/lang/zh-hk" class="mdui-typo texte{">繁体中文</a>
+            <p></p>
             <a href="//xiaoioi.github.io/TcsCraftdocs/start/#ip" class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-color-green-500"><i class="mdui-icon material-icons">play_circle_outline</i> 开始游戏</a>
-            <a href="//xiaoioi.github.io/TcsCraftd}ocs/" class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-color-light-blue-500"><i class="mdui-icon material-icons">insert_drive_file</i> 帮助文档</a>
+            <a href="//xiaoioi.github.io/TcsCraftdocs/" class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-color-light-blue-500"><i class="mdui-icon material-icons">insert_drive_file</i> 帮助文档</a>
             <p></p>
             <a href="/money.html" class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-color-red-500"><i class="mdui-icon material-icons">favorite</i> 赞助</a>
-            <a href="//xiaoioi.github.io/TcsCraftdocs/" class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-color-blue-600"><i class="mdui-icon material-icons">group</i> QQ群聊</a>
+            <a href="https://jq.qq.com/?_wv=1027&k=x6tTBbM" class="mdui-btn mdui-ripple mdui-color-theme-accent mdui-color-blue-600"><i class="mdui-icon material-icons">group</i> QQ群聊</a>
         </div>
-        <div class="mdui-content mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-grid-list" align="center">
-            <div class="mdui-container mdui-col">
+        <div class="mdui-content mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-2 mdui-grid-list" align="center">
+            <div class="mdui-container mdui-col" align="center">
                 <div class="content-text">
                     <h4 class="mdui-text-color-theme-accent detail_tle_1"></h4>
                     <p class="mdui-typo-subheading-opacity mdui-text-color-black-600 detail_dec_1"></p>
@@ -112,7 +119,7 @@
                 </div>
             </div>
             <div>
-                <div class="mdui-container mdui-col">
+                <div class="mdui-container mdui-col" align="center">
                     <div class="content-text">
                         <h4 class="mdui-text-color-theme-accent detail_tle_2"></h4>
                         <p class="mdui-typo-subheading-opacity mdui-text-color-grey-600 detail_dec_2"></p>
@@ -120,99 +127,100 @@
                     </div>
                 </div>
             </div>
-            <div class="mdui-row content-text mdui-p-b-2 mdui-p-t-1 mdui-m-a-0">
-                <div class="mdui-col-xs-12 mdui-col-md-6 mdui-center">
-                    <h4 class="mdui-text-color-blue" align="center">关于我们</h4>
-                    <div class="mdui-row-xs-3 mdui-center content-about">
-                        <div class="mdui-col mdui-p-a-0">
-                            <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_1" src="//q1.qlogo.cn/g?b=qq&amp;nk=1789055955&amp;s=100">
-                            <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_1">甜瓜</h4>
-                            <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_1">服主</p>
-                        </div>
-                        <div class="mdui-col mdui-p-a-0">
-                            <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=3467109261&amp;s=100">
-                            <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">୧( ⁼̴̶̤̀ω⁼̴̶̤́ )૭</h4>
-                            <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">互通服服竹</p>
-                        </div>
-                        <div class="mdui-col mdui-p-a-0">
-                            <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_2" src="//q1.qlogo.cn/g?b=qq&amp;nk=2872385395&amp;s=100">
-                            <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_2">ㅤ</h4>
-                            <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_2">维护</p>
-                        </div>
-                        <div class="mdui-col mdui-p-a-0">
-                            <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_2" src="//q1.qlogo.cn/g?b=qq&amp;nk=2672516588&amp;s=100">
-                            <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_2">qweemm</h4>
-                            <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_2">维护</p>
-                        </div>
-                        <div class="mdui-col mdui-p-a-0">
-                            <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=2854196320&amp;s=100">
-                            <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">乔晓啸</h4>
-                            <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">官网制作</p>
-                        </div>
-                        <div class="mdui-col mdui-p-a-0">
-                            <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=2803118348&amp;s=100">
-                            <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">飞羊</h4>
-                            <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">创造服腐竹</p>
-                        </div>
-                        <div class="mdui-col mdui-p-a-0">
-                            <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=3294145480&amp;s=100">
-                            <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">一桶桶装水⁧⁧</h4>
-                            <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">OP</p>
-                        </div>
-                        <div class="mdui-col mdui-p-a-0">
-                            <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=3081636005&amp;s=100">
-                            <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">猫猫盒</h4>
-                            <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">OP</p>
-                        </div>
-                        <div class="mdui-col mdui-p-a-0">
-                            <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=2668055805&amp;s=100">
-                            <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">。</h4>
-                            <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">OP</p>
-                        </div>
-                        <a href="//fabu.mcmzw.ml">
-                            <div class="mdui-col mdui-p-a-0">
-                                <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=2928633076&amp;s=100">
-                                <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">土豆整合包</h4>
-                                <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">点我</p>
-                            </div>
-                        </a>
+        </div>
+        <div class="mdui-row content-text ">
+            <div class="mcui-dialog mdui-col-md-6 mdui-center">
+                <h4 class="mdui-text-color-blue" align="center">关于我们</h4>
+                <div class="mdui-row-xs-3 mdui-center content-about">
+                    <div class="mdui-col mdui-p-a-0">
+                        <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_1" src="//q1.qlogo.cn/g?b=qq&amp;nk=1789055955&amp;s=100">
+                        <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_1">甜瓜</h4>
+                        <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_1">服主</p>
                     </div>
-                    <a href="//www.mzwbbs.com">
-                        <img class="mdui-img-fluid mdui-shadow-3 mdui-color-green-a700" src="img/mzwbbs.svg"></a>
+                    <div class="mdui-col mdui-p-a-0">
+                        <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=3467109261&amp;s=100">
+                        <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">୧( ⁼̴̶̤̀ω⁼̴̶̤́ )૭</h4>
+                        <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">互通服服竹</p>
+                    </div>
+                    <div class="mdui-col mdui-p-a-0">
+                        <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_2" src="//q1.qlogo.cn/g?b=qq&amp;nk=2872385395&amp;s=100">
+                        <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_2">ㅤ</h4>
+                        <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_2">维护</p>
+                    </div>
+                    <div class="mdui-col mdui-p-a-0">
+                        <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_2" src="//q1.qlogo.cn/g?b=qq&amp;nk=2672516588&amp;s=100">
+                        <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_2">qweemm</h4>
+                        <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_2">维护</p>
+                    </div>
+                    <div class="mdui-col mdui-p-a-0">
+                        <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=2854196320&amp;s=100">
+                        <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">乔晓啸</h4>
+                        <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">官网制作</p>
+                    </div>
+                    <div class="mdui-col mdui-p-a-0">
+                        <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=2803118348&amp;s=100">
+                        <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">飞羊</h4>
+                        <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">创造服腐竹</p>
+                    </div>
+                    <div class="mdui-col mdui-p-a-0">
+                        <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=3294145480&amp;s=100">
+                        <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">一桶桶装水⁧⁧</h4>
+                        <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">OP</p>
+                    </div>
+                    <div class="mdui-col mdui-p-a-0">
+                        <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=3081636005&amp;s=100">
+                        <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">猫猫盒</h4>
+                        <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">OP</p>
+                    </div>
+                    <div class="mdui-col mdui-p-a-0">
+                        <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=2668055805&amp;s=100">
+                        <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">。</h4>
+                        <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">OP</p>
+                    </div>
+                    <a href="//fabu.mcmzw.ml">
+                        <div class="mdui-col mdui-p-a-0">
+                            <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=2928633076&amp;s=100">
+                            <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">土豆整合包</h4>
+                            <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">点我</p>
+                        </div>
+                    </a>
                 </div>
-                <div class="mdui-col-md-6 mdui-center">
-                    <div class="mdui-p-b-1 mdui-hidden-sm-down">
-                        <h4 class="mdui-text-color-blue" align="center">数据</h4>
-                    </div>
-                    <div class="mdui-row-xs-2">
-                        <div class="mdui-row mdui-center" align="center">
-                            <div class="mdui-p-t-1 mdui-col-xs-6 mdui-chol-md-12">
-                                <div class="mdui-typo-title">玩家总数</div>
-                                <div class="mdui-typo-subheading">1000+</div>
-                                <div class="mdui-typo-caption">* 三周目 424人 (22-1-14)</div>
-                            </div>
-                            <div class="mdui-p-t-1 mdui-col-xs-6 mdui-cobl-md-12">
-                                <div class="mdui-hidden-sm-down"></div>
-                                <div class="mdui-typo-title">收到的捐款</div>
-                                <div class="mdui-typo-subheading">350</div>
-                            </div>
+                <a href="//www.mzwbbs.com">
+                    <img class="mdui-img-fluid mdui-shadow-3 mdui-color-green-a700" src="img/mzwbbs.svg"></a>
+            </div>
+            <p></p>
+            <div class="mcui-dialog mdui-col-md-6 mdui-center">
+                <div class="mdui-p-b-1 ">
+                    <h4 class="mdui-text-color-blue" align="center">数据</h4>
+                </div>
+                <div class="mdui-row-xs-2">
+                    <div class="mdui-row mdui-center" align="center">
+                        <div class="mdui-p-t-1 mdui-col-xs-6 mdui-chol-md-12">
+                            <div class="mdui-typo-title">玩家总数</div>
+                            <div class="mdui-typo-subheading">1000+</div>
+                            <div class="mdui-typo-caption">* 三周目 424人 (22-1-14)</div>
+                        </div>
+                        <div class="mdui-p-t-1 mdui-col-xs-6 mdui-cobl-md-12">
+                            <div class="mdui-hidden-sm-down"></div>
+                            <div class="mdui-typo-title">收到的捐款</div>
+                            <div class="mdui-typo-subheading">350</div>
                         </div>
                     </div>
                 </div>
-                <div style="padding-bottom:5px;" class="mdui-col-xs-12 mdui-col-md-6 mdui-center">
-                    <div class="mdui-p-b-1 mdui-hidden-sm-down">
-                        <h4 class="mdui-text-color-blue" align="center">联系我们</h4>
-                    </div>
-                    <div class="mdui-row-xs-2">
-                        <div class="mdui-row mdui-center">
-                            <div class="mdui-col-xs-6 mdui-chol-md-12">
-                                <a class="mdui-ripple mdui-btn mdui-color-theme-50 mdui-theme-accent-blue mdui-theme-primary-blue-grey mdui-btn-block mdui-center mdui-shadow-1 content-border-radiu-btn down-btn mdui-text-color-grey-600 email" href="/cdn-cgi/l/email-protection#27564040564040564040161514671611140944484a"><i class="mdui-icon mdui-icon-left material-icons mdui-text-color-blue">mail</i> 联系邮箱</a>
-                                <div class="mdui-hidden-sm-down"></div>
-                            </div>
-                            <div class="mdui-col-xs-6 mdui-cobl-md-12">
-                                <div class="mdui-hidden-sm-down"></div>
-                                <a class="mdui-ripple mdui-btn mdui-color-theme-50 mdui-theme-accent-blue mdui-theme-primary-blue-grey mdui-btn-block mdui-center mdui-shadow-1 content-border-radiu-btn down-btn mdui-text-color-grey-600 qq_group" href="//jq.qq.com/?_wv=1027&amp;k=tSlOEt0U" target="_blank"><i class="mdui-icon mdui-icon-left material-icons mdui-text-color-blue">group</i> 交流Q群</a>
-                            </div>
+            </div>
+            <div style="padding-bottom:5px;" class="mcui-dialog mdui-col-xs-12 mdui-col-md-6 mdui-center">
+                <div class="mdui-p-b-1 ">
+                    <h4 class="mdui-text-color-blue" align="center">联系我们</h4>
+                </div>
+                <div class="mdui-row-xs-2">
+                    <div class="mdui-row mdui-center">
+                        <div class="mdui-col-xs-6 mdui-chol-md-12">
+                            <a class="mdui-ripple mdui-btn mdui-color-theme-50 mdui-theme-accent-blue mdui-theme-primary-blue-grey mdui-btn-block mdui-center mdui-shadow-1 content-border-radiu-btn down-btn mdui-text-color-grey-600 email" href="/cdn-cgi/l/email-protection#27564040564040564040161514671611140944484a"><i class="mdui-icon mdui-icon-left material-icons mdui-text-color-blue">mail</i> 联系邮箱</a>
+                            <div class="mdui-hidden-sm-down"></div>
+                        </div>
+                        <div class="mdui-col-xs-6 mdui-cobl-md-12">
+                            <div class="mdui-hidden-sm-down"></div>
+                            <a class="mdui-ripple mdui-btn mdui-color-theme-50 mdui-theme-accent-blue mdui-theme-primary-blue-grey mdui-btn-block mdui-center mdui-shadow-1 content-border-radiu-btn down-btn mdui-text-color-grey-600 qq_group" href="//jq.qq.com/?_wv=1027&amp;k=tSlOEt0U" target="_blank"><i class="mdui-icon mdui-icon-left material-icons mdui-text-color-blue">group</i> 交流Q群</a>
                         </div>
                     </div>
                 </div>
@@ -228,10 +236,10 @@
     lightGallery(document.getElementById('lightgallery'));
 </script>
 <style>
-@media (prefers-color-scheme: dark) {
-  body {
-  }
-}
+    @media (prefers-color-scheme: dark) {
+        body {}
+    }
+
     .texte {
         background-image: linear-gradient(to right, orange, purple);
         -webkit-background-clip: text;
