@@ -1,0 +1,52 @@
+/* font 字体 */
+@font-face {
+    font-family: "Minecraft";
+    src: url("../fonts/Minecraft.woff2") format("woff2");    
+}    @font-face {
+  font-family: Minetitlefont;
+  src: url(../data-uri/woff2/woff2_43821.woff2)
+      format("woff2"),
+    url(../data-uri/woff/woff_1d4aa.woff)
+      format("woff2");
+}
+
+/* default */
+*{
+    font-family: "Minecraft";
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    text-size-adjust 100%;
+    box-sizing: border-box; 
+    /* text-shadow: 0 2px 0 rgb(0 0 0 / 25%); */
+}
+
+body{
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.2em;
+    font-family: "Minecraft";
+}
+body ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: 0 0;
+}
+
+body ::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,.2);
+}
+
+html.mcui-scrollbar ::-webkit-scrollbar{
+    width: 14px;
+    background: rgba(0,0,0,.1);
+}
+
+.mcui-scrollbar ::-webkit-scrollbar{
+    width: 8px;
+}
+
+.mcui-scrollbar ::-webkit-scrollbar-thumb{
+    border: 2px solid transparent;
+	border-image: url('../img/scrollbar.png') 2 fill repeat;
+}
