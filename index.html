@@ -39,8 +39,12 @@
         .content-about img {
             width: 90px;
         }
+
+        .mcui-dialog {
+            padding-bottom:8px;
+        }
     </style>
-    <style>
+    <!-- style>
         .div {
             perspective: 500;
             -webkit-perspective: 500;
@@ -104,12 +108,12 @@
                 filter: blur(48px);
             }
         }
-    </style>
+    </style -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/index.js"></script>
 </head>
 
-<body class="mcui-background-woolg mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
+<body class="mcui-background-woolb mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
     <!-- 这是Vue的 -->
     <div id="app">
         <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
@@ -119,13 +123,6 @@
                 <div class="mdui-toolbar-spacer"></div>
             </div>
         </header>
-        <div class="mdui-dialog" id="bilibili">
-            <div class="mdui-dialog-title">BiliBili 视频</div>
-            <div class="mdui-dialog-content">There is nothing here.</div>
-            <div class="mdui-dialog-actions">
-                <button class="mdui-btn mdui-ripple" mdui-dialog-close=""><i class="mdui-icon material-icons">close</i></button>
-            </div>
-        </div>
         <div class="mdui-drawer mdui-color-theme-50 mdui-drawer-close mdui-shadow-0" id="drawer">
             <!-- 顶部图片 -->
             <p></p>
@@ -159,7 +156,7 @@
     <div class="mdui-container" style="padding-top:;">
         <div align="center">
             <div class="div">
-                <img src="/img/logo.png" class="rotate">
+                <img src="/img/logo.png" class="mdui-img-fluid rotate">
             </div>
             <h2 class="mdui-typo texte">甜瓜の生存服成立于2021年10月29日，是一个比较完美的我的世界基岩版养老生存服</h2>
             <a href="/lang/zh-hk" class="mdui-typo texte">繁体中文</a>
@@ -167,33 +164,27 @@
             <button class="mdui-color-theme-accent mdui-color-green-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='//xiaoioi.github.io/TcsCraftdocs/'"><i class="mdui-icon material-icons">play_circle_outline</i> 开始游戏</button>
             <button class="mdui-color-theme-accent mdui-color-light-blue-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='//xiaoioi.github.io/TcsCraftdocs/'"><i class="mdui-icon material-icons">insert_drive_file</i> 帮助文档</button>
             <p></p>
-            <button class="mdui-color-theme-accent mdui-color-red-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='//xiaoioi.github.io/TcsCraftdocs/'"><i class="mdui-icon material-icons">favorite</i> 赞助</button>
+            <button class="mdui-color-theme-accent mdui-color-red-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='/money.html'"><i class="mdui-icon material-icons">favorite</i> 赞助</button>
             <button class="mdui-color-theme-accent mdui-color-blue-600 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='//jq.qq.com/?_wv=1027&amp;k=tSlOEt0U'"><i class="mdui-icon material-icons">add</i> QQ群聊</button>
-        </div><span class="mdi mdi-qqchat"></span>
-        <div class="mdui-content mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-2 mdui-grid-list" align="center">
+        </div>
+        <div style="padding-bottom:5px;" class="mdui-content mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-2 " align="center">
             <div class="mdui-container mdui-col" align="center">
-                <div class="content-text">
-                    <h4 class="mdui-text-color-theme-accent detail_tle_1"></h4>
-                    <p class="mdui-typo-subheading-opacity mdui-text-color-black-600 detail_dec_1"></p>
-                    <img class="mdui-shadow-3 mdui-img-fluid" src="img/1efcd324d1617ee50ffbdc20085062a2.jpeg">
-                </div>
+                <h4 class="mdui-text-color-theme-accent detail_tle_1"></h4>
+                <p class="mdui-typo-subheading-opacity mdui-text-color-black-600 detail_dec_1"></p>
+                <img class="mdui-shadow-3 mdui-img-fluid" src="img/1efcd324d1617ee50ffbdc20085062a2.jpeg">
             </div>
-            <div>
                 <div class="mdui-container mdui-col" align="center">
-                    <div class="content-text">
-                        <h4 class="mdui-text-color-theme-accent detail_tle_2"></h4>
-                        <p class="mdui-typo-subheading-opacity mdui-text-color-grey-600 detail_dec_2"></p>
-                        <img data-src="img/2-1600.jpg" class="mdui-shadow-3 mdui-img-fluid" src="img/14da737dca7f1de839db10759e419291.jpeg">
-                    </div>
+                    <h4 class="mdui-text-color-theme-accent detail_tle_2"></h4>
+                    <p class="mdui-typo-subheading-opacity mdui-text-color-grey-600 detail_dec_2"></p>
+                    <img class="mdui-shadow-3 mdui-img-fluid" src="img/14da737dca7f1de839db10759e419291.jpeg">
                 </div>
-            </div>
         </div>
         <div class="mdui-row">
             <div class="mcui-dialog mdui-col-md-6 mdui-center">
                 <div class="mdui-m-y-1 mcui-alert">
                     <div class="mdui-text-color-blue" align="center">关于我们</div>
                 </div>
-                <div class="mcui-alert mdui-row-xs-3 mdui-center content-about">
+                <div class="mcui-alert mdui-row-xs-3 mdui-row-md-5 mdui-center content-about">
                     <div class="mdui-col mdui-p-a-0">
                         <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_1" src="//q1.qlogo.cn/g?b=qq&amp;nk=1789055955&amp;s=100">
                         <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_1">甜瓜</h4>
@@ -202,7 +193,7 @@
                     <div class="mdui-col mdui-p-a-0">
                         <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_3" src="//q1.qlogo.cn/g?b=qq&amp;nk=3467109261&amp;s=100">
                         <h4 class="mdui-text-center content-about-h4 mdui-text-color-grey-700 auth_name_3">୧( ⁼̴̶̤̀ω⁼̴̶̤́ )૭</h4>
-                        <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">互通服服竹</p>
+                        <p class="mdui-text-center content-about-p mdui-text-color-grey-600 auth_info_3">服务器赞助</p>
                     </div>
                     <div class="mdui-col mdui-p-a-0">
                         <img class="mdui-img-circle mdui-center mdui-shadow-3 content-about-img auth_ico_2" src="//q1.qlogo.cn/g?b=qq&amp;nk=2872385395&amp;s=100">
@@ -268,7 +259,7 @@
                     </div>
                 </div>
             </div>
-            <div style="padding-bottom:5px;" class="mcui-dialog mdui-col-xs-12 mdui-col-md-6 mdui-center">
+            <div class="mcui-dialog mdui-col-xs-12 mdui-col-md-6 mdui-center">
                 <div class="mdui-m-y-1 mcui-alert">
                     <div class="mdui-text-color-blue" align="center">联系我们</div>
                 </div>
@@ -281,7 +272,14 @@
                     </div>
                 </div>
             </div>
-            <a href="//www.mzwbbs.com"><img class="mdui-img-fluid mdui-center mcui-alert" align="center" src="img/mzwbbs.svg"></a>
+            <div class="mcui-dialog mdui-col-xs-12 mdui-col-md-6 mdui-center">
+                <div class="mdui-m-y-1 mcui-alert">
+                    <div class="mdui-text-color-blue" align="center">友情链接</div>
+                </div>
+                <div class="mcui-alert">
+                    <a href="//www.mzwbbs.com"><img class="mdui-img-fluid mdui-center mdui-ripple" align="center" src="img/mzwbbs.svg"></a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
