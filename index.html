@@ -114,6 +114,7 @@
 </head>
 
 <body class="mcui-background-woolb mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
+
     <!-- 这是Vue的 -->
     <div id="app">
         <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
@@ -290,6 +291,25 @@
 <script>
     lightGallery(document.getElementById('lightgallery'));
 </script>
+<script>
+var _LoadingHtml = '正在加载中，正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。请稍后。。。';
+ 
+//呈现loading效果
+ 
+document.write(_LoadingHtml);
+ 
+//监听加载状态改变
+document.onreadystatechange = completeLoading;
+ 
+//加载状态为complete时移除loading效果
+function () {
+    if (document.readyState == "complete") {
+        var loadingMask = document.getElementById('loadingDiv');
+        loadingMask.parentNode.removeChild(loadingMask);
+    }
+}
+ 
+</script>
 <style>
     @media (prefers-color-scheme: dark) {
         body {}
@@ -301,5 +321,4 @@
         color: transparent;
     }
 </style>
-
 </html>

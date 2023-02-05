@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Van家作品 - Tian</title>
-    <link href="/dist/css/lightgallery.css" rel="stylesheet">
+    <title>Van家作品/博物馆 - Tian</title>
+    <link rel="stylesheet" type="text/css" href="/css/mcui.css">
+    <link rel="stylesheet" type="text/css" href="/css/font.mcui.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/zit.css">
     <meta http-equiv="Content-Language" contect="zh-CN">
     <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <script src="js/zh-CN.js">
@@ -36,7 +38,7 @@
     <script src="js/index.js"></script>
 </head>
 
-<body class="mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
+<body class="padding-top mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-appbar-with-tab mdui-theme-primary-blue-grey">
     <!-- 这是Vue的 -->
     <div id="app">
         <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
@@ -45,25 +47,17 @@
                 <span class="mdui-typo-title">Tian</span> <a class="mdui-typo-headline" href="index.html"></a>
                 <div class="mdui-toolbar-spacer"></div>
             </div>
-            <div class="mdui-color-theme-50" style="border-radius: 0 0 20px 20px;">
-                <!--<div class="mdui-container">
-                    <div class="mdui-typo-subheading">甜瓜の生存服成立于2021年10月29日，是一个完美的我的世界基岩版养老生存服</div>
-                    <p></p>
-                    <a href="//xiaoioi.github.io/TcsCraftdocs/start/#ip" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-light-blue-300"><i class="mdui-icon material-icons">play_circle_outline</i> 开始游戏</a>
-                    <a href="//xiaoioi.github.io/TcsCraftdocs/" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-light-blue-300"><i class="mdui-icon material-icons">insert_drive_file</i> 帮助文档</a>
-                    <a class="mdui-btn mdui-btn-icon mdui-ripple mdui-color-theme-accent mdui-color-light-blue-300" mdui-dialog="{target: '#bilibili'}"><img class="mdui-icon" src="img/video.svg"></a>
-                    <p></p>
-                </div>
-            </div>-->
-                <p></p>
+    <div class="mdui-tab mdui-tab-centered mdui-color-theme-50" mdui-tab>
+        <a onclick="activeTab1()" href="#new" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons" id="tabIcon1">add_a_photo</i>
+            <label>作品</label>
+        </a>
+        <a onclick="activeTab2()" href="#old" class="mdui-ripple mdui-ripple-white">
+            <i class="mdui-icon material-icons" id="tabIcon2">account_balance</i>
+            <label>博物馆</label>
+        </a>
+    </div>
         </header>
-        <div class="mdui-dialog" id="bilibili">
-            <div class="mdui-dialog-title">BiliBili 视频</div>
-            <div class="mdui-dialog-content">There is nothing here.</div>
-            <div class="mdui-dialog-actions">
-                <button class="mdui-btn mdui-ripple" mdui-dialog-close=""><i class="mdui-icon material-icons">close</i></button>
-            </div>
-        </div>
         <div class="mdui-drawer mdui-color-theme-50 mdui-drawer-close mdui-shadow-0" id="drawer">
             <!-- 顶部图片 -->
             <p></p>
@@ -93,38 +87,66 @@
                 </span>
             </ul>
         </div>
-    </div>
-    <div class="mdui-container" style="padding-top:;">
-        <div class="mdui-content mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-grid-list" align="center">
-            <div>
-                <div class="mdui-col-xs-6" id="lightgallery">
-                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/1.jpeg" src="img/van/1.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
-                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/2.jpeg" src="img/van/2.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
-                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/3.jpeg" src="img/van/3.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
-                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/4.jpeg" src="img/van/4.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
-                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/5.jpeg" src="img/van/5.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
-                </div>
-                <div class="mdui-col-xs-6" id="lightgallervy">
-                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/6.jpeg" src="img/van/6.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
-                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/7.jpeg" src="img/van/7.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
-                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/8.jpeg" src="img/van/8.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
-                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/9.jpeg" src="img/van/9.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
-                    <img class="mdui-shadow-3 mdui-img-fluid" data-src="img/van/10.jpeg" src="img/van/10.jpeg" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+        <div class="mdui-container" style="padding-top:;">
+            <div id="new">
+            <div class="mdui-content mdui-grid-list" align="center">
+                <div v-if="config" v-for="group in config.vans" class="">
+                    <div class="mdui-row-xs-2 mdui-row-md-3 mdui-row-lg-10 mdui-row-xl-12" >
+                        <a v-for="item in group.items" class="mdui-col vancard" :href="item.img" target="_self">
+                            <img class="mdui-shadow-3 mdui-img-fluid" data-src="item.img" :src="item.img" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-
+        <div id="old" class="mdui-p-a-2">
+            There is nothing here.
+            <div class="mdui-content mdui-grid-list" align="center">
+                <div class="">
+                    <div class="mdui-row-xs-2 mdui-row-md-3 mdui-row-lg-10 mdui-row-xl-12" >
+                        <a class="mdui-col vancard" href="item.img" target="_self">
+                            <img class="mdui-shadow-3 mdui-img-fluid" data-src="item.img" src="item.img" data-sub-html="<h4>Bowness Bay</h4><p>A</p>">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <i align="center" class="mdui-icon material-icons mdui-center mdui-typo-display-2-opacity">help_outline</i>
         <h2 align="center">申请投稿</h2>
         <h3 align="center">QQ群 - 群相册</h3>
     </div>
 </body>
-<script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
-<script src="../demo/js/lg-rotate.js"></script>
-<script>
-    lightGallery(document.getElementById('lightgallery'));
-    lightGallery(document.getElementById('lightgallervy'));
-</script>
+<link href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" type="ee71b4ea12285dc3ed787f94-text/javascript"></script>
 
+<style>
+    .vancard {
+        padding: 8px 8px;
+        border: 0;
+        border-radius: 8px;
+        /* margin: 8px; */
+        text-decoration: none;
+        /* display: block; */
+    }
+
+    .block {
+        height: 10%;
+    }
+</style>
+    <script>
+        function activeTab1(){
+            document.getElementById('tabIcon1').classList.add("mdui-color-theme-300");
+            document.getElementById('tabIcon1').style.padding = "4px 24px";
+            document.getElementById('tabIcon2').classList.remove("mdui-color-theme-300");
+            document.getElementById('tabIcon2').style.padding = "4px 4px";
+        }
+        function activeTab2(){
+            document.getElementById('tabIcon2').classList.add("mdui-color-theme-300");
+            document.getElementById('tabIcon2').style.padding = "4px 24px";
+            document.getElementById('tabIcon1').classList.remove("mdui-color-theme-300");
+            document.getElementById('tabIcon1').style.padding = "4px 4px";
+        }
+        activeTab1();
+    </script>
 </html>
