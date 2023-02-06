@@ -1,4 +1,9 @@
-const { createApp, ref, watchEffect } = Vue
+
+const {
+    createApp,
+    ref,
+    watchEffect
+} = Vue
 const APPS_URL = "./index.json"
 app = createApp({
     data() {
@@ -6,7 +11,7 @@ app = createApp({
         fetch(APPS_URL)
             .then((res) => res.json())
             .then((json) => (config.value = json))
-            .catch(function (error) {
+            .catch(function(error) {
                 console.error(error)
             })
         return {
@@ -20,13 +25,15 @@ app = createApp({
         mdui.mutation()
     }
 })
-mdui.$(function () {
+mdui.$(function() {
     app.mount('#app')
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/serviceWorker.js', { scope: '/' }).then(function (reg) {
+        navigator.serviceWorker.register('/serviceWorker.js', {
+            scope: '/'
+        }).then(function(reg) {
             // registration worked
             console.log('Registration succeeded. Scope is ' + reg.scope);
-        }).catch(function (error) {
+        }).catch(function(error) {
             // registration failed
             console.log('Registration failed with ' + error);
         });

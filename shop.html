@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/mdui.min.css">
     <link href="../dist/css/lightgallery.css" rel="stylesheet">
     <script src="js/mdui.min.js"></script>
+    <script src="js/translate.js"></script>
     <link href="../dist/css/lightgallery.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <link href="css/video-js.min.css" rel="stylesheet">
@@ -47,21 +48,25 @@
     <div id="app">
         <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
             <div class="mdui-toolbar mdui-color-theme-50">
-                <a class="mdui-btn mdui-btn-icon waves-circle toolbar-btn" mdui-drawer="{target: '#drawer', swipe: true}"> <i class="mdui-icon material-icons">menu</i> </a>
-                <span class="mdui-typo-title">Tian</span> <a class="mdui-typo-headline" href="index.html"></a>
+                <a class="mdui-btn mdui-btn-icon toolbar-btn" mdui-drawer="{target: '#drawer', swipe: true}">
+                    <i class="mdui-icon material-icons">menu</i>
+                </a>
+                <span class="mdui-typo-title">Tian</span>
+                <a class="mdui-typo-headline" href="index.html"></a>
                 <div class="mdui-toolbar-spacer"></div>
+                <button class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#translate'}">
+                    <i class="mdui-icon material-icons">translate</i>
+                </button>
+
+                <ul class="mdui-menu" id="translate">
+                    <li class="mdui-menu-item">
+                        <a href="javascript:translate.changeLanguage('chinese_simplified');">简体中文</a>
+                    </li>
+                    <li class="mdui-menu-item">
+                        <a href="javascript:translate.changeLanguage('chinese_traditional');">繁體中文</a>
+                    </li>
+                </ul>
             </div>
-            <div class="mdui-color-theme-50" style="border-radius: 0 0 20px 20px;">
-                <!--<div class="mdui-container">
-                    <div class="mdui-typo-subheading">甜瓜の生存服成立于2021年10月29日，是一个完美的我的世界基岩版养老生存服</div>
-                    <p></p>
-                    <a href="//xiaoioi.github.io/TcsCraftdocs/start/#ip" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-light-blue-300"><i class="mdui-icon material-icons">play_circle_outline</i> 开始游戏</a>
-                    <a href="//xiaoioi.github.io/TcsCraftdocs/" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-color-light-blue-300"><i class="mdui-icon material-icons">insert_drive_file</i> 帮助文档</a>
-                    <a class="mdui-btn mdui-btn-icon mdui-ripple mdui-color-theme-accent mdui-color-light-blue-300" mdui-dialog="{target: '#bilibili'}"><img class="mdui-icon" src="img/video.svg"></a>
-                    <p></p>
-                </div>
-            </div>-->
-                <p></p>
         </header>
         <div class="mdui-dialog" id="bilibili">
             <div class="mdui-dialog-title">BiliBili 视频</div>
@@ -138,4 +143,5 @@
     <h2 align="center">帮助</h2>
     </div>
 </body>
+<script src="https://res.zvo.cn/translate/translate.js"></script>
 </html>

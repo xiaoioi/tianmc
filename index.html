@@ -4,8 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>Tian</title>
-    <link rel="stylesheet" href="//unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
-    <script src="//unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/mcui.css">
     <link rel="stylesheet" type="text/css" href="/css/font.mcui.min.css">
     <link rel="stylesheet" type="text/css" href="/css/zit.css">
@@ -17,6 +15,7 @@
     <!-- MDUI -->
     <link rel="stylesheet" href="css/mdui.min.css">
     <script src="js/mdui.min.js"></script>
+    <script src="js/translate.js"></script>
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <!-- Vue -->
     <script src="js/vue.global.prod.js"></script>
@@ -39,7 +38,7 @@
         }
 
         .mcui-dialog {
-            padding-bottom:8px;
+            padding-bottom: 8px;
         }
     </style>
     <!-- style>
@@ -117,9 +116,24 @@
     <div id="app">
         <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
             <div class="mdui-toolbar mdui-color-theme-50">
-                <a class="mdui-btn mdui-btn-icon waves-circle toolbar-btn" mdui-drawer="{target: '#drawer', swipe: true}"> <i class="mdui-icon material-icons">menu</i> </a>
-                <span class="mdui-typo-title">Tian</span> <a class="mdui-typo-headline" href="index.html"></a>
+                <a class="mdui-btn mdui-btn-icon toolbar-btn" mdui-drawer="{target: '#drawer', swipe: true}">
+                    <i class="mdui-icon material-icons">menu</i>
+                </a>
+                <span class="mdui-typo-title">Tian</span>
+                <a class="mdui-typo-headline" href="index.html"></a>
                 <div class="mdui-toolbar-spacer"></div>
+                <button class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#translate'}">
+                    <i class="mdui-icon material-icons">translate</i>
+                </button>
+
+                <ul class="mdui-menu" id="translate">
+                    <li class="mdui-menu-item">
+                        <a href="javascript:translate.changeLanguage('chinese_simplified');">简体中文</a>
+                    </li>
+                    <li class="mdui-menu-item">
+                        <a href="javascript:translate.changeLanguage('chinese_traditional');">繁體中文</a>
+                    </li>
+                </ul>
             </div>
         </header>
         <div class="mdui-drawer mdui-color-theme-50 mdui-drawer-close mdui-shadow-0" id="drawer">
@@ -158,7 +172,7 @@
                 <img src="/img/logo.png" class="mdui-img-fluid rotate">
             </div>
             <h2 class="mdui-typo texte">甜瓜の生存服成立于2021年10月29日，是一个比较完美的我的世界基岩版养老生存服</h2>
-            <a href="/lang/zh-hk" class="mdui-typo texte">繁体中文</a>
+
             <p></p>
             <button class="mdui-color-theme-accent mdui-color-green-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='/docs#/start'"><i class="mdui-icon material-icons">play_circle_outline</i> 开始游戏</button>
             <button class="mdui-color-theme-accent mdui-color-light-blue-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='/docs'"><i class="mdui-icon material-icons">insert_drive_file</i> 帮助文档</button>
@@ -167,17 +181,56 @@
             <button class="mdui-color-theme-accent mdui-color-blue-600 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='//jq.qq.com/?_wv=1027&amp;k=tSlOEt0U'"><i class="mdui-icon material-icons">add</i> QQ群聊</button>
             <button class="mdui-color-theme-accent mdui-color-blue-600 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='http://tianmlp.xunpan.tk/'"><i class="mdui-icon material-icons">add</i> 加入论坛</button>
         </div>
+        <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-2" mdui-panel>
+            <div class="mdui-panel-item">
+                <div class="mdui-panel-item-header">
+                    <div class="mdui-panel-item-title">查看公吿</div>
+                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <div class="mdui-panel-item-body">
+                    <p />
+                    <div class="mcui-alert mdui-container mdui-col">
+                        <!-- 卡片的标题和副标题 -->
+                        <div class="mdui-card-primary">
+                            <div class="mdui-card-primary-title">通知</div>
+                        </div>
+
+                        <!-- 卡片的内容 -->
+                        <div class="mdui-card-content">主服正在维护，大约2月7日开服 <del>恢复时长两年半</del></div>
+
+                        <!-- 卡片的按钮 -->
+                        <div class="mdui-card-actions">
+                        </div>
+                    </div>
+                    <p />
+                    <div class="mcui-alert mdui-container mdui-col">
+                        <!-- 卡片的标题和副标题 -->
+                        <div class="mdui-card-primary">
+                            <div class="mdui-card-primary-title">活动</div>
+                        </div>
+
+                        <!-- 卡片的内容 -->
+                        <div class="mdui-card-content">流浪草方块计划开始 地点钟表菜单公共传迭点</div>
+
+                        <!-- 卡片的按钮 -->
+                        <div class="mdui-card-actions">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         <div style="padding-bottom:5px;" class="mdui-content mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-2 " align="center">
             <div class="mdui-container mdui-col" align="center">
                 <h4 class="mdui-text-color-theme-accent detail_tle_1"></h4>
                 <p class="mdui-typo-subheading-opacity mdui-text-color-black-600 detail_dec_1"></p>
                 <img class="mdui-shadow-3 mdui-img-fluid" src="img/1efcd324d1617ee50ffbdc20085062a2.jpeg">
             </div>
-                <div class="mdui-container mdui-col" align="center">
-                    <h4 class="mdui-text-color-theme-accent detail_tle_2"></h4>
-                    <p class="mdui-typo-subheading-opacity mdui-text-color-grey-600 detail_dec_2"></p>
-                    <img class="mdui-shadow-3 mdui-img-fluid" src="img/14da737dca7f1de839db10759e419291.jpeg">
-                </div>
+            <div class="mdui-container mdui-col" align="center">
+                <h4 class="mdui-text-color-theme-accent detail_tle_2"></h4>
+                <p class="mdui-typo-subheading-opacity mdui-text-color-grey-600 detail_dec_2"></p>
+                <img class="mdui-shadow-3 mdui-img-fluid" src="img/14da737dca7f1de839db10759e419291.jpeg">
+            </div>
         </div>
         <div class="mdui-row">
             <div class="mcui-dialog mdui-col-md-6 mdui-center">
@@ -284,11 +337,12 @@
     </div>
 </body>
 <style>
-
     .texte {
         background-image: linear-gradient(to right, orange, purple);
         -webkit-background-clip: text;
         color: transparent;
     }
 </style>
+<script src="https://res.zvo.cn/translate/translate.js"></script>
+
 </html>

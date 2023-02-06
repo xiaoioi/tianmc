@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/mdui.min.css">
     <link href="../dist/css/lightgallery.css" rel="stylesheet">
     <script src="js/mdui.min.js"></script>
+    <script src="js/translate.js"></script>
     <link href="../dist/css/lightgallery.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <link href="css/video-js.min.css" rel="stylesheet">
@@ -66,11 +67,26 @@
 <body class="mcui-background-wool-auto mdui-theme-layout-auto mdui-theme-primary-blue-grey">
     <!-- 这是Vue的 -->
     <div id="app">
-        <header class="mdui-theme-primary-blue-grey mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
+        <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
             <div class="mdui-toolbar mdui-color-theme-50">
-                <a class="mdui-btn mdui-btn-icon waves-circle toolbar-btn" mdui-drawer="{target: '#drawer', swipe: true}"> <i class="mdui-icon material-icons">menu</i> </a>
-                <span class="mdui-typo-title">Tian</span> <a class="mdui-typo-headline" href="index.html"></a>
+                <a class="mdui-btn mdui-btn-icon toolbar-btn" mdui-drawer="{target: '#drawer', swipe: true}">
+                    <i class="mdui-icon material-icons">menu</i>
+                </a>
+                <span class="mdui-typo-title">Tian</span>
+                <a class="mdui-typo-headline" href="index.html"></a>
                 <div class="mdui-toolbar-spacer"></div>
+                <button class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#translate'}">
+                    <i class="mdui-icon material-icons">translate</i>
+                </button>
+
+                <ul class="mdui-menu" id="translate">
+                    <li class="mdui-menu-item">
+                        <a href="javascript:translate.changeLanguage('chinese_simplified');">简体中文</a>
+                    </li>
+                    <li class="mdui-menu-item">
+                        <a href="javascript:translate.changeLanguage('chinese_traditional');">繁體中文</a>
+                    </li>
+                </ul>
             </div>
         </header>
         <div class="mdui-dialog" id="bilibili">
