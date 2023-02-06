@@ -7,7 +7,14 @@
     color: #fff;
     background-image: url('../img/bg-wool-dark.png');
 }
-
+.mcui-background-wool-auto{
+    background-image: url('../img/bg-wool-white.png');
+}
+    @media (prefers-color-scheme: dark) {
+        .mcui-background-wool-auto {
+        background-image: url('../img/bg-wool-dark.png');
+        }
+    }
 .mcui-background-wool-light{
     background-image: url('../img/bg-wool-white.png');
 }
@@ -200,9 +207,9 @@
     color: #fff;
     background: #8b8b8b;
     
-	border-radius: 16px;
+    border-radius: 16px;
     border: 16px solid transparent;
-	border-image: url('../img/dialog.png') 8 fill repeat;
+    border-image: url('../img/dialog.png') 8 fill repeat;
 }
 
 .mcui-dialog[like~="title"]{
@@ -434,40 +441,40 @@ a.mcui-btn{
 
 /* badge 徽章 */
 .mcui-badge{
-	color: #fff;
-	background: rgba(0,0,0,.8);
+    color: #fff;
+    background: rgba(0,0,0,.8);
 
-	padding: 2px 4px;
-	position: relative;
+    padding: 2px 4px;
+    position: relative;
 
-	font-size: .9em;
+    font-size: .9em;
     height: 1em;
     line-height: .9em;
-	display: inline-block;
+    display: inline-block;
 }
 
 .mcui-badge::before{
-	content: "";
-	display: block;
+    content: "";
+    display: block;
 
-	height: 2px;
-	width: calc(100% - 4px);
-	top: -2px;
-	left: 2px;
-	position: absolute;
-	background: inherit;
+    height: 2px;
+    width: calc(100% - 4px);
+    top: -2px;
+    left: 2px;
+    position: absolute;
+    background: inherit;
 }
 
 .mcui-badge::after{
-	content: "";
-	display: block;
+    content: "";
+    display: block;
 
-	height: 2px;
-	width: calc(100% - 4px);
-	left: 2px;
-	bottom: -2px;
-	position: absolute;
-	background: inherit;
+    height: 2px;
+    width: calc(100% - 4px);
+    left: 2px;
+    bottom: -2px;
+    position: absolute;
+    background: inherit;
 }
 
 /* alert 警告框  */
@@ -475,7 +482,7 @@ a.mcui-btn{
     color: #fff;
     border-radius: 16px;
     border: 8px solid transparent;
-	border-image: url('../img/alert.png') 4 fill repeat;
+    border-image: url('../img/alert.png') 4 fill repeat;
 
     position: relative;
 }
@@ -661,17 +668,17 @@ a.mcui-btn{
 /*  thumbnail 缩略图 */
 .mcui-thumbnail{
     border: 2px solid transparent;
-	border-image: url('../img/thumbnail.png') 1 fill repeat;
+    border-image: url('../img/thumbnail.png') 1 fill repeat;
 }
 
 .mcui-thumbnail[type="alert"]{
     border: 6px solid transparent;
-	border-image: url('../img/thumbnail_alert.png') 3 fill repeat;
+    border-image: url('../img/thumbnail_alert.png') 3 fill repeat;
 }
 
 .mcui-thumbnail[type="chose"]{
     border: 6px solid transparent;
-	border-image: url('../img/thumbnail_chose.png') 3 fill repeat;
+    border-image: url('../img/thumbnail_chose.png') 3 fill repeat;
 }
 
 /* list 列表 */
@@ -692,7 +699,7 @@ a.mcui-btn{
     padding: 8px;
     cursor: pointer;
     border: 4px solid transparent;
-	border-image: url('../img/list_light.png') 1 fill repeat;
+    border-image: url('../img/list_light.png') 1 fill repeat;
 }
 
 .mcui-list-item:hover{
@@ -746,11 +753,11 @@ a.mcui-btn{
 }
 
 .mcui-tab a:first-child{
-	border-image: url('../img/TabBackInGameLeftMost.png') 4 fill repeat;
+    border-image: url('../img/TabBackInGameLeftMost.png') 4 fill repeat;
 }
 
 .mcui-tab a.mcui-tab-active:first-child{
-	border-image: url('../img/TabFrontInGameLeftMost.png') 4 fill repeat;
+    border-image: url('../img/TabFrontInGameLeftMost.png') 4 fill repeat;
 }
 
 

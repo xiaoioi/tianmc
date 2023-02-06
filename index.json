@@ -1,45 +1,45 @@
 {
     "vans": [{
-        "name": "热门应用",
-        "id": "hot",
+        "name": "",
+        "id": "",
         "items": [{
-                "name": "作者名",
+                "name": "作者名A 作品名A",
                 "img": "img/van/1.jpeg"
             },
             {
-                "name": "作者名",
+                "name": "作者名A 作品名A",
                 "img": "img/van/2.jpeg"
             },
             {
-                "name": "作者名",
+                "name": "作者名A 作品名A",
                 "img": "img/van/3.jpeg"
             },
             {
-                "name": "作者名",
+                "name": "作者名A 作品名A",
                 "img": "img/van/4.jpeg"
             },
             {
-                "name": "作者名",
+                "name": "作者名A 作品名A",
                 "img": "img/van/5.jpeg"
             },
             {
-                "name": "作者名",
+                "name": "作者名A 作品名A",
                 "img": "img/van/6.jpeg"
             },
             {
-                "name": "作者名",
+                "name": "作者名A 作品名A",
                 "img": "img/van/7.jpeg"
             },
             {
-                "name": "作者名",
+                "name": "作者名A 作品名A",
                 "img": "img/van/8.jpeg"
             },
             {
-                "name": "作者名",
+                "name": "作者名A 作品名A",
                 "img": "img/van/9.jpeg"
             },
             {
-                "name": "作者名",
+                "name": "作者名A 作品名A",
                 "img": "img/van/10.jpeg"
             }
         ]

@@ -4,7 +4,7 @@
 
 1. 打开MC基岩版
 2. 点击游戏 服务器 添加服务器
-3. 输入服务器的地址:
+3. 输入服务器的地址
 4. 开始游玩吧
 
 
@@ -25,8 +25,7 @@
 5. 开始游玩吧
 
 ### IP
-<img src="//motd.smgoro.top/status_img?host=k2.getmc.cn:15132"></img >
-请忽略上面的结果
+<img src="//motd.smgoro.top/status_img?host=k2.getmc.cn:15292"></img>
 
 IP:k2.getmc.cn
 
@@ -34,7 +33,7 @@ IP:k2.getmc.cn
 <hr>
 创造服
 
-<img src="//motd.smgoro.top/status_img?host=k1.getmc.cn:15452"></img >
+<img src="//motd.smgoro.top/status_img?host=k1.getmc.cn:15452"></img>
 
 地址：k1.getmc.cn
 
@@ -42,9 +41,8 @@ IP:k2.getmc.cn
 <hr>
 互通服
 
-<img src="//motd.smgoro.top/status_img?host=mcp7.rhymc.com:1141"></img >
+<img src="//motd.smgoro.top/status_img?host=mcp7.rhymc.com:1141"></img>
 
 mcp7.rhymc.com
 
 端口:1141
-<hr>

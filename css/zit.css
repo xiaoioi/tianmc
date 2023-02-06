@@ -48,5 +48,5 @@ html.mcui-scrollbar ::-webkit-scrollbar{
 
 .mcui-scrollbar ::-webkit-scrollbar-thumb{
     border: 2px solid transparent;
-	border-image: url('../img/scrollbar.png') 2 fill repeat;
+    border-image: url('../img/scrollbar.png') 2 fill repeat;
 }

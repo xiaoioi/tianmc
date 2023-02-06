@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Tian</title>
+    <link rel="stylesheet" href="//unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <script src="//unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/mcui.css">
     <link rel="stylesheet" type="text/css" href="/css/font.mcui.min.css">
     <link rel="stylesheet" type="text/css" href="/css/zit.css">
@@ -15,13 +17,9 @@
     <!-- MDUI -->
     <link rel="stylesheet" href="css/mdui.min.css">
     <script src="js/mdui.min.js"></script>
-    <link href="../dist/css/lightgallery.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/theme.css">
-    <link href="css/video-js.min.css" rel="stylesheet">
     <!-- Vue -->
     <script src="js/vue.global.prod.js"></script>
-
-    <script src="//unpkg.com/@mdi/font@7.1.96/css/materialdesignicons.min.css"></script>
     <style>
         .mdui-shadow-3 {
             border-radius: 8px;
@@ -113,7 +111,7 @@
     <script src="js/index.js"></script>
 </head>
 
-<body class="mcui-background-woolb mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
+<body class="mcui-background-wool-auto mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
 
     <!-- 这是Vue的 -->
     <div id="app">
@@ -162,8 +160,8 @@
             <h2 class="mdui-typo texte">甜瓜の生存服成立于2021年10月29日，是一个比较完美的我的世界基岩版养老生存服</h2>
             <a href="/lang/zh-hk" class="mdui-typo texte">繁体中文</a>
             <p></p>
-            <button class="mdui-color-theme-accent mdui-color-green-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='//xiaoioi.github.io/TcsCraftdocs/'"><i class="mdui-icon material-icons">play_circle_outline</i> 开始游戏</button>
-            <button class="mdui-color-theme-accent mdui-color-light-blue-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='//xiaoioi.github.io/TcsCraftdocs/'"><i class="mdui-icon material-icons">insert_drive_file</i> 帮助文档</button>
+            <button class="mdui-color-theme-accent mdui-color-green-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='/docs#/start'"><i class="mdui-icon material-icons">play_circle_outline</i> 开始游戏</button>
+            <button class="mdui-color-theme-accent mdui-color-light-blue-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='/docs'"><i class="mdui-icon material-icons">insert_drive_file</i> 帮助文档</button>
             <p></p>
             <button class="mdui-color-theme-accent mdui-color-red-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='/money.html'"><i class="mdui-icon material-icons">favorite</i> 赞助</button>
             <button class="mdui-color-theme-accent mdui-color-blue-600 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='//jq.qq.com/?_wv=1027&amp;k=tSlOEt0U'"><i class="mdui-icon material-icons">add</i> QQ群聊</button>
@@ -285,35 +283,7 @@
         </div>
     </div>
 </body>
-<script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
-<script src="../demo/js/lg-rotate.js"></script>
-<script>
-    lightGallery(document.getElementById('lightgallery'));
-</script>
-<script>
-var _LoadingHtml = '正在加载中，正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。正在加载中，请稍后。。。请稍后。。。';
- 
-//呈现loading效果
- 
-document.write(_LoadingHtml);
- 
-//监听加载状态改变
-document.onreadystatechange = completeLoading;
- 
-//加载状态为complete时移除loading效果
-function () {
-    if (document.readyState == "complete") {
-        var loadingMask = document.getElementById('loadingDiv');
-        loadingMask.parentNode.removeChild(loadingMask);
-    }
-}
- 
-</script>
 <style>
-    @media (prefers-color-scheme: dark) {
-        body {}
-    }
 
     .texte {
         background-image: linear-gradient(to right, orange, purple);

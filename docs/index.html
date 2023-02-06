@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
-</head>
-<body>
-  <!-- index.html -->
-  <div data-app id="main">加载中</div>
 
-  <script>
-    window.$docsify = {
-      el: '#main',
-      loadSidebar: true,
-    }
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/mcui.css">
+    <link rel="stylesheet" type="text/css" href="/css/font.mcui.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/zit.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+    <link rel="stylesheet" media="(prefers-color-scheme: light)" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+    <meta charset="UTF-8">
+</head>
+
+<body class="mcui-background-wool-auto">
+    <nav>
+        <a href="#/">简体中文</a>
+        <a href="#/zh-hant/">繁体中文</a>
+    </nav>
+    <div data-app id="main"></div>
+    <script>
+        window.$docsify = {
+            alias: {
+                '/(.*)': 'https://raw.fastgit.org/xiaoioi/TcsCraftdocs/docs/$1',
+                '/zh-hant/(.*)': 'https://raw.fastgit.org/xiaoioi/TcsCraftdocs/docs/$1',
+            },
+            name: 'Tian 官方文档',
+            fallbackLanguages: ['zh-cn', 'zh-hant'],
+            auto2top: true,
+            el: '#main',
+            loadSidebar: true,
+            subMaxLevel: 2,
+            formatUpdated: '{MM}/{DD} {HH}:{mm}',
+            // 按照路由切换
+            nameLink: {
+                '/zh-hant/': '/docs/zh-hant',
+                '/': '/docs',
+            },
+        }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+    <!-- docsify-themeable -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+
 </body>
+
 </html>
