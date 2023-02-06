@@ -64,12 +64,12 @@
             {
                 "icon": "play_circle_filled",
                 "name": "IP",
-                "href": "https://xiaoioi.github.io/TcsCraftdocs/start/#ip"
+                "href": "/docs#/start#ip"
             },
             {
                 "icon": "insert_drive_file",
                 "name": "文档",
-                "href": "https://xiaoioi.github.io/TcsCraftdocs"
+                "href": "/docs"
             },
             {
                 "icon": "shop",

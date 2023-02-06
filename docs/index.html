@@ -20,15 +20,16 @@
     <div data-app id="main"></div>
     <script>
         window.$docsify = {
-            //alias: {
-            //    '/(.*)': 'https://raw.fastgit.org/xiaoioi/TcsCraftdocs/docs/$1',
-            //    '/zh-hant/(.*)': 'https://raw.fastgit.org/xiaoioi/TcsCraftdocs/docs/$1',
-            //},
+            alias: {
+                '/(.*)': 'https://xiaoioi.github.io/TcsCraftdocs/$1',
+                '/zh-hant/(.*)': 'https://xiaoioi.github.io/TcsCraftdocs/$1',
+            },
             name: 'Tian 官方文档',
             fallbackLanguages: ['zh-cn', 'zh-hant'],
             auto2top: true,
             el: '#main',
             loadSidebar: true,
+            loadSidebar: 'sidebar.md',
             subMaxLevel: 2,
             formatUpdated: '{MM}/{DD} {HH}:{mm}',
             // 按照路由切换
