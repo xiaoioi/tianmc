@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Tian</title>
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" type="text/css" href="/css/mcui.css">
     <link rel="stylesheet" type="text/css" href="/css/font.mcui.min.css">
     <link rel="stylesheet" type="text/css" href="/css/zit.css">
@@ -18,6 +19,8 @@
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <!-- Vue -->
     <script src="js/vue.global.prod.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js"></script>
     <style>
         .mdui-shadow-3 {
             border-radius: 8px;
@@ -40,77 +43,75 @@
             padding-bottom: 8px;
         }
     </style>
-    <!-- style>
-        .div {
-            perspective: 500;
-            -webkit-perspective: 500;
-            width: 100%;
-            height: 100%;
-        }
-
-        .rotate {
-            animation-name: rotate;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            width: 100%;
-            height: 100%;
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotateY(0deg);
-            }
-
-            25% {
-                transform: rotateY(90deg) translateY(8px);
-            }
-
-            50% {
-                transform: rotateY(180deg) translateY(16px);
-            }
-
-            75% {
-                transform: rotateY(270deg) translateY(8px);
-            }
-
-            100% {
-                transform: rotateY(360deg);
-            }
-        }
-
-        .shadow {
-            width: 128px;
-            height: 128px;
-            margin-left: calc(50% - 64px);
-            border-radius: 128px;
-            background-color: #999999;
-            transform: rotateX(75deg);
-            animation-name: blur;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes blur {
-            0% {
-                filter: blur(48px);
-            }
-
-            50% {
-                filter: blur(32px);
-            }
-
-            100% {
-                filter: blur(48px);
-            }
-        }
-    </style -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/index.js"></script>
 </head>
 
 <body class="mcui-background-wool-auto mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
 
+
+    <div class="mdui-dialog mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-2 " id="exampleDialog">
+        <div class="mdui-dialog-title">公告</div>
+
+        <div class="mdui-dialog-content">
+            <p />
+            <div class="mcui-alert mdui-container mdui-col">
+                <!-- 卡片的标题和副标题 -->
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">通知</div>
+                </div>
+
+                <!-- 卡片的内容 -->
+                <div class="mdui-card-content"><del>主服正在维护，大约2月7日开服 恢复时长两年半</del>维护完成</div>
+
+                <!-- 卡片的按钮 -->
+                <div class="mdui-card-actions">
+                </div>
+            </div>
+            <div class="mcui-alert mdui-container mdui-col">
+                <!-- 卡片的标题和副标题 -->
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">通知</div>
+                </div>
+
+                <!-- 卡片的内容 -->
+                <div class="mdui-card-content">@全体成员 基岩服不是我不想关服，而是存档在开服初期开了实验玩法（众所周知，实验玩法不稳定，但是能提供新版本的预览）所以，基岩服存档现在我也没有办法能继续开下去（我试过换插件，花了我快两天时间，可问题依旧存在）现在我会继续开互通服下去（至少2024年之前不会关服）</div>
+
+                <!-- 卡片的按钮 -->
+                <div class="mdui-card-actions">
+                </div>
+            </div>
+            <div class="mcui-alert mdui-container mdui-col">
+                <!-- 卡片的标题和副标题 -->
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">活动</div>
+                </div>
+
+                <!-- 卡片的内容 -->
+                <div class="mdui-card-content">流浪草方块计划开始 地点钟表菜单公共传迭点</div>
+
+                <!-- 卡片的按钮 -->
+                <div class="mdui-card-actions">
+                </div>
+            </div>
+            <div class="mcui-alert mdui-container mdui-col">
+                <!-- 卡片的标题和副标题 -->
+                <div class="mdui-card-primary">
+                    <div class="mdui-card-primary-title">活动</div>
+                </div>
+
+                基岩版服务器存档公开
+                https://www.123pan.com/s/OnS0Vv-T9pb 提取码：JfSF
+                存档禁止转发！禁止发布到网上（例如苦力怕论坛 minebbs）！
+
+                <!-- 卡片的按钮 -->
+                <div class="mdui-card-actions">
+                </div>
+            </div>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>cancel</button>
+            <button class="mdui-btn mdui-ripple" mdui-dialog-confirm>erase</button>
+        </div>
+    </div>
     <!-- 这是Vue的 -->
     <div id="app">
         <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
@@ -135,6 +136,19 @@
                 </ul>
             </div>
         </header>
+        <aside id="banner" class="banner single-line mdui-theme-accent-blue mdui-color-heme-50 single-line">
+            <!--I cannot use a pseudo element to contain the icon because I can't set variable colors for it.-->
+            <i class="banner__icon mdui-color-theme-accent mdui-icon material-icons">warning</i>
+            <p>
+                <!--Flex-friendly-->
+                <h5>4周末会在1.20发布正式版开启</h5>
+            </p>
+            <footer class="banner__actions">
+                <button class="banner__actions mdui-btn-icon mdui-btn mdui-ripple mdui-text-color-theme-accent banner-ok">
+                    <i class="mdui-icon material-icons" mdui-dialog="{target: '#exampleDialog'}">more</i>
+                </button>
+            </footer>
+        </aside>
         <div class="mdui-drawer mdui-color-theme-50 mdui-drawer-close mdui-shadow-0" id="drawer">
             <!-- 顶部图片 -->
             <p></p>
@@ -173,50 +187,12 @@
             <h2 class="mdui-typo texte">甜瓜の生存服成立于2021年10月29日，是一个比较完美的我的世界基岩版养老生存服</h2>
 
             <p></p>
-            <button class="mdui-color-theme-accent mdui-color-green-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='/docs#/start'"><i class="mdui-icon material-icons">play_circle_outline</i> 开始游戏</button>
+            <button class="mdui-color-theme-accent mdui-color-green-500 mdi-btn mdui-ripple mcui-btn-base" onclick="location.href='/docs#/start'"><i class="mdui-icon material-icons">play_circle_outline</i> 开始游戏</button>
             <button class="mdui-color-theme-accent mdui-color-light-blue-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='/docs'"><i class="mdui-icon material-icons">insert_drive_file</i> 帮助文档</button>
             <p></p>
             <button class="mdui-color-theme-accent mdui-color-red-500 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='/money.html'"><i class="mdui-icon material-icons">favorite</i> 赞助</button>
             <button class="mdui-color-theme-accent mdui-color-blue-600 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='//jq.qq.com/?_wv=1027&amp;k=tSlOEt0U'"><i class="mdui-icon material-icons">add</i> QQ群聊</button>
             <button class="mdui-color-theme-accent mdui-color-blue-600 mdui-bn mdui-ripple mcui-btn-base" onclick="location.href='http://tianmlp.xunpan.tk/'"><i class="mdui-icon material-icons">add</i> 加入论坛</button>
-        </div>
-        <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-2 mdui-panel" mdui-panel>
-            <div class="mdui-panel-item">
-                <div class="mdui-panel-item-header">
-                    <div class="mdui-panel-item-title">查看公吿</div>
-                    <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-                </div>
-                <div class="mdui-panel-item-body">
-                    <p />
-                    <div class="mcui-alert mdui-container mdui-col">
-                        <!-- 卡片的标题和副标题 -->
-                        <div class="mdui-card-primary">
-                            <div class="mdui-card-primary-title">通知</div>
-                        </div>
-
-                        <!-- 卡片的内容 -->
-                        <div class="mdui-card-content"><del>主服正在维护，大约2月7日开服 恢复时长两年半</del>维护完成</div>
-
-                        <!-- 卡片的按钮 -->
-                        <div class="mdui-card-actions">
-                        </div>
-                    </div>
-                    <p />
-                    <div class="mcui-alert mdui-container mdui-col">
-                        <!-- 卡片的标题和副标题 -->
-                        <div class="mdui-card-primary">
-                            <div class="mdui-card-primary-title">活动</div>
-                        </div>
-
-                        <!-- 卡片的内容 -->
-                        <div class="mdui-card-content">流浪草方块计划开始 地点钟表菜单公共传迭点</div>
-
-                        <!-- 卡片的按钮 -->
-                        <div class="mdui-card-actions">
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </div>
         <div style="padding-bottom:5px;" class="mdui-content mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-2 " align="center">

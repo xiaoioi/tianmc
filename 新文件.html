@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - New Material Design Guideline&#39;s Banner Component</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mduin.c分ss'>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- MDUI -->
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <script src="js/mdui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <header class="mdui-appbar mdui-theme-primary-teal">
+        <nav class="mdui-toolbar mdui-color-theme">
+            <div class="mdui-typo-title">Banner实例</div>
+        </nav>
+    </header>
+    <aside id="banner" class="mdui-theme-layout-auto banner single-line mdui-theme-accent-blue mdui-color-theme-50 single-line">
+        <!--I cannot use a pseudo element to contain the icon because I can't set variable colors for it.-->
+        <i class="banner__icon mdui-color-theme-accent mdui-icon material-icons">warning</i>
+        <p>
+            <!--Flex-friendly-->
+            4周末会在1.20正式版开启
+        </p>
+        <footer class="banner__actions">
+            <button class="banner__actions mdui-btn-icon mdui-btn mdui-ripple mdui-text-color-theme-accent banner-ok">
+                <i class="mdui-icon material-icons" mdui-dialog="{target: '#exampleDialog'}">more</i>
+            </button>
+        </footer>
+    </aside>
+    <main class="mdui-typo">
+        <p>
+            这是你的Banner。添加<code>single-line</code>类可以设置为单行（大同小异），具体测试请自行编辑代码。如果要和应用栏一起固定在顶部，直接放在<code>.mdui-appbar</code>内，并使<code>.mdui-appbar</code>固定在屏幕顶部。
+        </p>
+        <p>移动端样式还在抄袭。</p>
+        <p>样式来自Vuetify.</p>
+    </main>
+    <div style="min-height: 150vh;"></div>
+
+</body>
+
+</html>

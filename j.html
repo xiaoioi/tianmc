@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tian</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mcui.css">
+    <link rel="stylesheet" type="text/css" href="/css/font.mcui.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/zit.css">
+    <link href="/dist/css/lightgallery.css" rel="stylesheet">
+    <meta http-equiv="Content-Language" contect="zh-CN">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <script src="js/zh-CN.js">
+    </script>
+    <!-- MDUI -->
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <script src="js/mdui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <!-- Vue -->
+    <script src="js/vue.global.prod.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tronic247/material/dist/material.min.css" />
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css" />
+</head>
+
+<body style="font-family: " MiSans";" class="mcui-background-wool-auto mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
+
+    <!-- 这是Vue的 -->
+    <div id="app">
+        <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
+            <div class="mdui-toolbar mdui-color-theme-50">
+                <a class="mdui-btn mdui-btn-icon toolbar-btn" mdui-drawer="{target: '#drawer', swipe: true}">
+                    <i class="mdui-icon material-icons">menu</i>
+                </a>
+                <span class="mdui-typo-title">Tian</span>
+                <a class="mdui-typo-headline" href="index.html"></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <button class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#translate'}">
+                    <i class="mdui-icon material-icons">translate</i>
+                </button>
+
+                <ul class="mdui-menu" id="translate">
+                    <li class="mdui-menu-item">
+                        <a href="javascript:translate.changeLanguage('chinese_simplified');">简体中文</a>
+                    </li>
+                    <li class="mdui-menu-item">
+                        <a href="javascript:translate.changeLanguage('chinese_traditional');">繁體中文</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="mdui-drawer mdui-color-theme-50 mdui-drawer-close mdui-shadow-0" id="drawer">
+            <!-- 顶部图片 -->
+            <p></p>
+            <div>
+                <img :src="config?config.drawer.header:null" style="width: 100%;" :style="{opacity: config?1:0}">
+            </div>
+            <ul class="mdui-list" mdui-collapse="{accordion: true}" style="padding: 8px;">
+                <!-- 侧滑布局 -->
+                <li v-if="config &amp;&amp; config.drawer" v-for="item in config.drawer.items" class="mdui-collapse-item mdui-collapse-item">
+                    <a :href="item.href" class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">{{item.icon}}</i>
+                        <div class="mdui-list-item-content">{{item.name}}</div>
+                        <i v-if="item.subItems" class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                    </a>
+                    <ul v-if="item.subItems" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                        <a v-for="subItem in item.subItems" :href="subItem.href" class="waves-block radius">
+                            <li class="mdui-list-item mdui-ripple" :mdui-dalog="subItem.dialog">{{subItem.name}}</li>
+                        </a>
+                    </ul>
+                </li>
+                <script defer src="https://busuanzi.9420.ltd/js"></script>
+                <span style="position:fixed;bottom:0;" class="mdui-center mdui-typo-body-2-opacity">
+                    <pre>Powered by MDUI & MCUI
+本站总访客数 <span id="busuanzi_site_uv"></span> 人
+本站总访问量 <span id="busuanzi_site_pv"></span> 次                </pre>
+                </span>
+            </ul>
+        </div>
+    </div>
+    <br/>
+    <div class="card rounded-xl m-2">
+        <img src="img/van/1.jpeg">
+        <div class="body">
+            <h3 style="color: #000000;" class="card-title">本工具正在维护</h3>
+            <div class="textbox">
+                <div class="left">
+                </div>
+                <div class="middle">
+                    <label for="aaaa" class="label">QQ</label>
+                    <input type="text" id="aaaa" class="input">
+                </div>
+                <div class="right"></div>
+            </div>
+            <div class="textbox">
+                <div class="left">
+                </div>
+                <div class="middle">
+                    <label for="aaaa" class="label">XBOX ID</label>
+                    <input type="text" id="aaaa" class="input">
+                </div>
+                <div class="right"></div>
+            </div>
+            <div class="textbox">
+                <div class="left">
+                </div>
+                <div class="middle">
+                    <label for="aaaa" class="label">坐标</label>
+                    <input type="text" id="aaaa" class="input">
+                </div>
+                <div class="right"></div>
+            </div>
+            <div class="textbox textarea">
+                <div class="left">
+                </div>
+                <div class="middle">
+                    <label for="te" class="label">原因</label>
+                    <textarea id="te" cols="30" rows="10" class="input"></textarea>
+                </div>
+                <div class="right"></div>
+            </div>
+            <div class="textbox">
+                <div class="left">
+                </div>
+                <div class="middle">
+                    <label for="aaaa" class="label">类型</label>
+                    <select class="input" id=aaaa>
+                        <option value="" disabled selected>Placeholder</option>
+                        <option value="v">Option 2</option>
+                        <option value="v">Option 3</option>
+                        <option value="v">Option 4</option>
+                    </select>
+                </div>
+                <div class="right"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="btn unelevated">提交</button>
+            <button class="btn unelevated">Button</button>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/tronic247/material/dist/material.min.js"></script>
+<script src="https://res.zvo.cn/translate/translate.js"></script>
+<script src="js/translate.js"></script>
+<style>
+    @media (prefers-color-scheme: dark) {
+        .card {
+            background: #fff;
+        }
+
+        .card img {
+            filter: invert(2);
+        }
+
+        .card {
+            background: #fff;
+            filter: invert(1);
+        }
+    }
+</style>
+
+</html>

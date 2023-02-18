@@ -3,36 +3,39 @@
 
 /* background 背景 */
 
-.mcui-background-wool{
+.mcui-background-wool {
     color: #fff;
     background-image: url('../img/bg-wool-dark.png');
 }
-.mcui-background-wool-auto{
-    background-image: url('../img/bg-wool-white.png');
-}
-    @media (prefers-color-scheme: dark) {
-        .mcui-background-wool-auto {
-        background-image: url('../img/bg-wool-dark.png');
-        }
-    }
-.mcui-background-wool-light{
+
+.mcui-background-wool-auto {
     background-image: url('../img/bg-wool-white.png');
 }
 
-.mcui-background-wool-green{
+@media (prefers-color-scheme: dark) {
+    .mcui-background-wool-auto {
+        background-image: url('../img/bg-wool-dark.png');
+    }
+}
+
+.mcui-background-wool-light {
+    background-image: url('../img/bg-wool-white.png');
+}
+
+.mcui-background-wool-green {
     background-image: url('../img/bg-wool-green.png');
 }
 
-.mcui-background-delivery{
+.mcui-background-delivery {
     background-image: url('../img/delivery.gif');
 }
 
-.mcui-background-soil{
+.mcui-background-soil {
     background-image: url('../img/Soil.png');
 }
 
 /* progress 进度条 */
-.mcui-progress{
+.mcui-progress {
     width: 100%;
     height: 10px;
     padding: 0 4px;
@@ -43,18 +46,18 @@
     background-repeat: no-repeat, repeat-x, no-repeat;
     background-clip: border-box, content-box, border-box;
     background-image: url('../img/progress_unactivation_primary_left.png'),
-                      url('../img/progress_unactivation_primary.png'),
-                      url('../img/progress_unactivation_primary_right.png');
+        url('../img/progress_unactivation_primary.png'),
+        url('../img/progress_unactivation_primary_right.png');
 
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
 }
 
-.mcui-progress-exp::after{
+.mcui-progress-exp::after {
     content: "";
     display: block;
-    
+
     top: 0;
     bottom: 0;
     left: 2px;
@@ -67,7 +70,7 @@
     background-image: url('../img/progress_inside.png');
 }
 
-.mcui-progress-determinate{
+.mcui-progress-determinate {
     padding: 0 4px;
 
     top: 0;
@@ -83,85 +86,85 @@
     background-repeat: no-repeat, repeat-x, no-repeat;
     background-clip: border-box, content-box, border-box;
     background-image: url('../img/progress_activation_primary_left.png'),
-                      url('../img/progress_activation_primary.png'),
-                      url('../img/progress_activation_primary_right.png');
+        url('../img/progress_activation_primary.png'),
+        url('../img/progress_activation_primary_right.png');
 }
 
-.mcui-progress-success{
+.mcui-progress-success {
     background-image: url('../img/progress_unactivation_success_left.png'),
-                      url('../img/progress_unactivation_success.png'),
-                      url('../img/progress_unactivation_success_right.png');
+        url('../img/progress_unactivation_success.png'),
+        url('../img/progress_unactivation_success_right.png');
 }
 
-.mcui-progress-success .mcui-progress-determinate{
+.mcui-progress-success .mcui-progress-determinate {
     background-image: url('../img/progress_activation_success_left.png'),
-                      url('../img/progress_activation_success.png'),
-                      url('../img/progress_activation_success_right.png');
+        url('../img/progress_activation_success.png'),
+        url('../img/progress_activation_success_right.png');
 }
 
-.mcui-progress-danger{
+.mcui-progress-danger {
     background-image: url('../img/progress_unactivation_danger_left.png'),
-                      url('../img/progress_unactivation_danger.png'),
-                      url('../img/progress_unactivation_danger_right.png');
+        url('../img/progress_unactivation_danger.png'),
+        url('../img/progress_unactivation_danger_right.png');
 }
 
-.mcui-progress-danger .mcui-progress-determinate{
+.mcui-progress-danger .mcui-progress-determinate {
     background-image: url('../img/progress_activation_danger_left.png'),
-                      url('../img/progress_activation_danger.png'),
-                      url('../img/progress_activation_danger_right.png');
+        url('../img/progress_activation_danger.png'),
+        url('../img/progress_activation_danger_right.png');
 }
 
-.mcui-progress-info{
+.mcui-progress-info {
     background-image: url('../img/progress_unactivation_info_left.png'),
-                      url('../img/progress_unactivation_info.png'),
-                      url('../img/progress_unactivation_info_right.png');
+        url('../img/progress_unactivation_info.png'),
+        url('../img/progress_unactivation_info_right.png');
 }
 
-.mcui-progress-info .mcui-progress-determinate{
+.mcui-progress-info .mcui-progress-determinate {
     background-image: url('../img/progress_activation_info_left.png'),
-                      url('../img/progress_activation_info.png'),
-                      url('../img/progress_activation_info_right.png');
+        url('../img/progress_activation_info.png'),
+        url('../img/progress_activation_info_right.png');
 }
 
-.mcui-progress-warning{
+.mcui-progress-warning {
     background-image: url('../img/progress_unactivation_warning_left.png'),
-                      url('../img/progress_unactivation_warning.png'),
-                      url('../img/progress_unactivation_warning_right.png');
+        url('../img/progress_unactivation_warning.png'),
+        url('../img/progress_unactivation_warning_right.png');
 }
 
-.mcui-progress-warning .mcui-progress-determinate{
+.mcui-progress-warning .mcui-progress-determinate {
     background-image: url('../img/progress_activation_warning_left.png'),
-                      url('../img/progress_activation_warning.png'),
-                      url('../img/progress_activation_warning_right.png');
+        url('../img/progress_activation_warning.png'),
+        url('../img/progress_activation_warning_right.png');
 }
 
-.mcui-progress-purple{
+.mcui-progress-purple {
     background-image: url('../img/progress_unactivation_purple_left.png'),
-                      url('../img/progress_unactivation_purple.png'),
-                      url('../img/progress_unactivation_purple_right.png');
+        url('../img/progress_unactivation_purple.png'),
+        url('../img/progress_unactivation_purple_right.png');
 }
 
-.mcui-progress-purple .mcui-progress-determinate{
+.mcui-progress-purple .mcui-progress-determinate {
     background-image: url('../img/progress_activation_purple_left.png'),
-                      url('../img/progress_activation_purple.png'),
-                      url('../img/progress_activation_purple_right.png');
+        url('../img/progress_activation_purple.png'),
+        url('../img/progress_activation_purple_right.png');
 }
 
-.mcui-progress-white{
+.mcui-progress-white {
     background-image: url('../img/progress_unactivation_white_left.png'),
-                      url('../img/progress_unactivation_white.png'),
-                      url('../img/progress_unactivation_white_right.png');
+        url('../img/progress_unactivation_white.png'),
+        url('../img/progress_unactivation_white_right.png');
 }
 
-.mcui-progress-white .mcui-progress-determinate{
+.mcui-progress-white .mcui-progress-determinate {
     background-image: url('../img/progress_activation_white_left.png'),
-                      url('../img/progress_activation_white.png'),
-                      url('../img/progress_activation_white_right.png');
+        url('../img/progress_activation_white.png'),
+        url('../img/progress_activation_white_right.png');
 }
 
 /* button 按钮 */
 
-.mcui-btn-base{
+.mcui-btn-base {
     height: 42px;
     min-width: 80px;
     border: none;
@@ -170,129 +173,132 @@
     border-radius: 0;
     text-decoration: none;
     box-shadow: 0 -4px rgb(0 0 0 / 30%) inset,
-                0 4px rgb(255 255 255 / 50%) inset, 
-                -4px 0 rgb(255 255 255 / 50%) inset,
-                4px 0 rgb(0 0 0 / 30%) inset;
+        0 4px rgb(255 255 255 / 50%) inset,
+        -4px 0 rgb(255 255 255 / 50%) inset,
+        4px 0 rgb(0 0 0 / 30%) inset;
     transition: background .2s ease-in;
 }
 
-.mcui-btn-base{
+.mcui-btn-base {
     border: 3px solid #000;
     background: #c6c6c6;
 }
 
-.mcui-btn-base:hover{
+.mcui-btn-base:hover {
     background: #cad1ff;
 }
 
-.mcui-btn-base:active{
+.mcui-btn-base:active {
     border-color: #fff;
-    box-shadow: -4px 0px rgb(0 0 0 / 30%) inset, 
-                4px 0 rgb(255 255 255 / 50%) inset, 
-                0 -4px rgb(255 255 255 / 50%) inset,
-                0 4px rgb(0 0 0 / 30%) inset;
+    box-shadow: -4px 0px rgb(0 0 0 / 30%) inset,
+        4px 0 rgb(255 255 255 / 50%) inset,
+        0 -4px rgb(255 255 255 / 50%) inset,
+        0 4px rgb(0 0 0 / 30%) inset;
 }
 
-.mcui-btn-base-dark{
+.mcui-btn-base-dark {
     color: #fff;
     background: #3a3a3a;
 }
 
-.mcui-btn-base-dark:hover{
+.mcui-btn-base-dark:hover {
     background: #5f6a74;
 }
 
 /* dialog 对话框 */
-.mcui-dialog{
+.mcui-dialog {
     color: #fff;
     background: #8b8b8b;
-    
+
     border-radius: 16px;
     border: 16px solid transparent;
     border-image: url('../img/dialog.png') 8 fill repeat;
 }
 
-.mcui-dialog[like~="title"]{
+.mcui-dialog[like~="title"] {
     border-width: 46px 16px 16px 16px;
     border-image: url('../img/dialog_title.png') 23 8 8 8 fill repeat;
 }
 
-.mcui-dialog[like~="title"][like~="btn"]{
+.mcui-dialog[like~="title"][like~="btn"] {
     border-width: 46px 16px 76px 16px;
     border-image: url('../img/dialog_title_btn.png') 23 8 42 8 fill repeat;
 }
 
-.mcui-dialog[like~="title"][like~="btn2"]{
+.mcui-dialog[like~="title"][like~="btn2"] {
     border-width: 46px 16px 128px 16px;
     border-image: url('../img/dialog_title_btn2.png') 23 8 76 8 fill repeat;
 }
 
-.mcui-dialog[like~="btn"]{
+.mcui-dialog[like~="btn"] {
     border-width: 16px 16px 76px 16px;
     border-image: url('../img/dialog_btn.png') 8 8 42 8 fill repeat;
 }
 
-.mcui-dialog[like~="btn2"]{
+.mcui-dialog[like~="btn2"] {
     border-width: 16px 16px 128px 16px;
     border-image: url('../img/dialog_btn2.png') 8 8 76 8 fill repeat;
 }
 
-.mcui-dialog[like~="title"] .mcui-dialog-title{
+.mcui-dialog[like~="title"] .mcui-dialog-title {
     color: #000;
     height: 46px;
     line-height: 48px;
     margin-top: -46px;
 }
 
-.mcui-dialog[like~="btn"] > .mcui-dialog-actions{
+.mcui-dialog[like~="btn"]>.mcui-dialog-actions {
     margin-top: 12px;
     margin-bottom: -60px;
 }
 
-.mcui-dialog[like~="btn2"] > .mcui-dialog-actions{
+.mcui-dialog[like~="btn2"]>.mcui-dialog-actions {
     margin-top: 16px;
     margin-bottom: -112px;
 }
 
-.mcui-dialog-actions button{
+.mcui-dialog-actions button {
     height: 48px;
     width: calc(100%);
     font-size: 16px;
 }
 
-.mcui-dialog-content{
+.mcui-dialog-content {
     padding: 8px;
     position: relative;
-    word-wrap:break-word;
+    word-wrap: break-word;
 }
 
 .mcui-btn-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-top: 32px;
-  margin-bottom: 24px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
+
 .mcui-btn-group .mcui-btn {
-  margin: 4px 8px;
-  font-size: calc(14px + 0.375vw);
-  text-decoration: none;
+    margin: 4px 8px;
+    font-size: calc(14px + 0.375vw);
+    text-decoration: none;
 }
+
 .mcui-btn-group .mcui-btn i {
-  margin-top: -1px;
-  font-size: calc(20px + 0.375vw) !important;
+    margin-top: -1px;
+    font-size: calc(20px + 0.375vw) !important;
 }
+
 @media (max-width: 560px) {
-.mcui-btn-group .mcui-btn {
-    width: 100%;
-    max-width: 200px;
-    margin: 4px 40px;
-}
+    .mcui-btn-group .mcui-btn {
+        width: 100%;
+        max-width: 200px;
+        margin: 4px 40px;
+    }
 }
 
 .mcui-btn {
@@ -311,18 +317,18 @@
 
     display: inline-flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     vertical-align: middle;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
     -webkit-box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%),
@@ -330,7 +336,7 @@
         0 4px rgb(255 255 255 / 35%) inset,
         -4px 0 rgb(255 255 255 / 35%) inset,
         4px 0 rgb(0 0 0 / 25%) inset;
-            box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%),
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%),
         0 -4px rgb(0 0 0 / 25%) inset,
         0 4px rgb(255 255 255 / 35%) inset,
         -4px 0 rgb(255 255 255 / 35%) inset,
@@ -344,9 +350,11 @@
 
     transition: color ease-in-out .15s, background-color ease-in-out .15s, box-shadow ease-in-out .15s, transform ease-in-out .15s, -webkit-box-shadow ease-in-out .15s, -webkit-transform ease-in-out .15s;
 }
-a.mcui-btn{
+
+a.mcui-btn {
     text-decoration: none;
 }
+
 .mcui-btn.btn-link {
     color: #008542;
     text-decoration: underline;
@@ -354,7 +362,7 @@ a.mcui-btn{
 
     -webkit-box-shadow: none;
 
-            box-shadow: none;
+    box-shadow: none;
     text-shadow: none;
 
     -webkit-transition: -webkit-filter ease-in-out .15s;
@@ -365,26 +373,29 @@ a.mcui-btn{
 
     transition: filter ease-in-out .15s, -webkit-filter ease-in-out .15s;
 }
-.mcui-btn-link.mcui-btn-underline-none{
+
+.mcui-btn-link.mcui-btn-underline-none {
     text-decoration: none !important;
 }
+
 .mcui-btn.btn-link:hover {
     color: #008542;
     -webkit-filter: brightness(65%);
-            filter: brightness(65%);
+    filter: brightness(65%);
     background-color: transparent !important;
 
     -webkit-box-shadow: none;
 
-            box-shadow: none;
+    box-shadow: none;
 }
+
 .mcui-btn:active {
     -webkit-box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%),
         0 -4px rgb(0 0 0 / 25%) inset,
         0 4px rgb(255 255 255 / 35%) inset,
         -4px 0 rgb(255 255 255 / 35%) inset,
         4px 0 rgb(0 0 0 / 25%) inset;
-            box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%),
+    box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%),
         0 -4px rgb(0 0 0 / 25%) inset,
         0 4px rgb(255 255 255 / 35%) inset,
         -4px 0 rgb(255 255 255 / 35%) inset,
@@ -392,57 +403,70 @@ a.mcui-btn{
 
     -webkit-transform: translateY(4px);
 
-            transform: translateY(4px);
+    transform: translateY(4px);
 }
+
 .mcui-btn:not(.btn-link):hover {
     color: #fff !important;
     background-color: #313131 !important;
 }
+
 .mcui-btn-icon {
     padding: 16px;
 }
-.mcui-btn-icon .mci-icon{
+
+.mcui-btn-icon .mci-icon {
     margin: 0 !important;
 }
-.mcui-btn-icon.mcui-btn-link{
+
+.mcui-btn-icon.mcui-btn-link {
     text-decoration: none;
     text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
 }
+
 .mcui-btn.mcui-btn-sm {
     font-size: 18px;
     padding: 12px 16px;
     text-shadow: 0 1px 0 rgb(0 0 0 / 25%);
 }
+
 .mcui-btn.btn-icon.mcui-btn-sm {
     padding: 12px;
 }
+
 .mcui-btn.btn-sm .mcui-mci-icon {
     font-size: 22px;
 }
+
 .mcui-btn.mcui-btn-lg {
     font-size: 22px;
     padding: 20px 24px;
 }
+
 .mcui-btn.btn-icon.mcui-btn-lg {
     padding: 20px;
 }
+
 .mcui-btn.btn-lg .mci-icon {
     font-size: 28px;
 }
+
 .mcui-btn .mci-icon {
     margin: 0 2px;
 }
-.mcui-btn.theme-orange{
+
+.mcui-btn.theme-orange {
     text-shadow: 0 1px 0 rgb(0 0 0 / 25%);
 }
-.mcui-btn i{
-  font-size: inherit !important;
+
+.mcui-btn i {
+    font-size: inherit !important;
 }
 
 /* badge 徽章 */
-.mcui-badge{
+.mcui-badge {
     color: #fff;
-    background: rgba(0,0,0,.8);
+    background: rgba(0, 0, 0, .8);
 
     padding: 2px 4px;
     position: relative;
@@ -453,7 +477,7 @@ a.mcui-btn{
     display: inline-block;
 }
 
-.mcui-badge::before{
+.mcui-badge::before {
     content: "";
     display: block;
 
@@ -465,7 +489,7 @@ a.mcui-btn{
     background: inherit;
 }
 
-.mcui-badge::after{
+.mcui-badge::after {
     content: "";
     display: block;
 
@@ -478,7 +502,7 @@ a.mcui-btn{
 }
 
 /* alert 警告框  */
-.mcui-alert{
+.mcui-alert {
     color: #fff;
     border-radius: 16px;
     border: 8px solid transparent;
@@ -487,16 +511,16 @@ a.mcui-btn{
     position: relative;
 }
 
-.mcui-alert-content{
+.mcui-alert-content {
     padding: 8px;
     position: relative;
-    word-wrap:break-word;
+    word-wrap: break-word;
 }
 
-.mcui-alert[tip]::after{
+.mcui-alert[tip]::after {
     content: '';
     display: block;
-    
+
     bottom: -26;
     position: absolute;
 
@@ -506,62 +530,66 @@ a.mcui-btn{
     background-image: url('../img/alert_tip_bottom.png');
 }
 
-.mcui-alert[tip^="left"]::after,.mcui-alert[tip^="right"]::after{
+.mcui-alert[tip^="left"]::after,
+.mcui-alert[tip^="right"]::after {
     width: 26px;
     height: 38px;
 }
 
-.mcui-alert[tip^="top"]::after,.mcui-alert[tip^="bottom"]::after{
+.mcui-alert[tip^="top"]::after,
+.mcui-alert[tip^="bottom"]::after {
     width: 38px;
     height: 26px;
 }
 
-.mcui-alert[tip^="left"]::after{
+.mcui-alert[tip^="left"]::after {
     left: -26px;
     background-image: url('../img/alert_tip_left.png');
 }
 
-.mcui-alert[tip^="right"]::after{
+.mcui-alert[tip^="right"]::after {
     right: -26px;
     background-image: url('../img/alert_tip_right.png');
 }
 
-.mcui-alert[tip^="top"]::after{
+.mcui-alert[tip^="top"]::after {
     top: -26px;
     background-image: url('../img/alert_tip_top.png');
 }
 
-.mcui-alert[tip^="bottom"]::after{
+.mcui-alert[tip^="bottom"]::after {
     bottom: -26px;
     background-image: url('../img/alert_tip_bottom.png');
 }
 
-.mcui-alert[tip="right"]::after,.mcui-alert[tip="left"]::after{
+.mcui-alert[tip="right"]::after,
+.mcui-alert[tip="left"]::after {
     top: calc(50% - 19px);
 }
 
-.mcui-alert[tip="top"]::after,.mcui-alert[tip="bottom"]::after{
+.mcui-alert[tip="top"]::after,
+.mcui-alert[tip="bottom"]::after {
     left: calc(50% - 19px);
 }
 
-.mcui-alert[tip$="-top"]::after{
+.mcui-alert[tip$="-top"]::after {
     top: 0;
 }
 
-.mcui-alert[tip$="-bottom"]::after{
+.mcui-alert[tip$="-bottom"]::after {
     bottom: 0;
 }
 
-.mcui-alert[tip$="-left"]::after{
+.mcui-alert[tip$="-left"]::after {
     left: 0;
 }
 
-.mcui-alert[tip$="-right"]::after{
+.mcui-alert[tip$="-right"]::after {
     right: 0;
 }
 
 
-.mcui-alert-tip-top::before{
+.mcui-alert-tip-top::before {
     content: '';
     display: block;
     margin: auto;
@@ -574,14 +602,14 @@ a.mcui-btn{
 
 
 /* textfield 文本域 */
-.mcui-textfield{
+.mcui-textfield {
     height: auto;
     position: relative;
     overflow: hidden;
     margin: 8px 0;
 }
 
-.mcui-textfield-input{
+.mcui-textfield-input {
     color: #fff;
     background: #5e5e5e;
 
@@ -592,16 +620,16 @@ a.mcui-btn{
 
     border: 2px solid #000;
     box-shadow: 0 -3px rgb(255 255 255 / 50%) inset,
-                0 3px rgb(0 0 0 / 50%) inset ;
+        0 3px rgb(0 0 0 / 50%) inset;
     transition: .2s ease-in;
     resize: none;
 }
 
-.mcui-textfield-input:focus{
+.mcui-textfield-input:focus {
     border-color: #fff;
 }
 
-.mcui-textfield-block{
+.mcui-textfield-block {
     display: block;
     width: 100%;
 }
@@ -609,14 +637,15 @@ a.mcui-btn{
 /* checkbox 复选框
     radio 单选框  */
 
-.mcui-checkbox,.mcui-radio{
+.mcui-checkbox,
+.mcui-radio {
     margin: 8px;
     height: 24px;
     line-height: 24px;
     padding-left: 32px;
     position: relative;
     display: inline-block;
-    
+
     cursor: pointer;
     user-select: none;
     -ms-user-select: none;
@@ -624,7 +653,8 @@ a.mcui-btn{
     -webkit-user-select: none;
 }
 
-.mcui-checkbox input[type=checkbox],.mcui-radio input[type=radio]{
+.mcui-checkbox input[type=checkbox],
+.mcui-radio input[type=radio] {
     width: 0;
     height: 0;
     opacity: 0;
@@ -632,7 +662,8 @@ a.mcui-btn{
     position: absolute;
 }
 
-.mcui-checkbox span::before,.mcui-radio span::before{
+.mcui-checkbox span::before,
+.mcui-radio span::before {
     content: "";
     display: block;
     width: 20px;
@@ -646,7 +677,8 @@ a.mcui-btn{
 
 }
 
-.mcui-checkbox > input:checked + span::after,.mcui-radio > input:checked + span::after{
+.mcui-checkbox>input:checked+span::after,
+.mcui-radio>input:checked+span::after {
     content: "";
     width: 20px;
     height: 20px;
@@ -657,44 +689,47 @@ a.mcui-btn{
     background-image: url('../img/check_light.png');
 }
 
-.mcui-checkbox > input:disabled + span::before,.mcui-radio > input:disabled + span::before{
+.mcui-checkbox>input:disabled+span::before,
+.mcui-radio>input:disabled+span::before {
     border: 2px solid #8b8b8b;
 }
 
-.mcui-checkbox > input:checked:disabled + span::after,.mcui-radio > input:checked:disabled + span::after{
+.mcui-checkbox>input:checked:disabled+span::after,
+.mcui-radio>input:checked:disabled+span::after {
     background-image: url('../img/check.png');
 }
 
 /*  thumbnail 缩略图 */
-.mcui-thumbnail{
+.mcui-thumbnail {
     border: 2px solid transparent;
     border-image: url('../img/thumbnail.png') 1 fill repeat;
 }
 
-.mcui-thumbnail[type="alert"]{
+.mcui-thumbnail[type="alert"] {
     border: 6px solid transparent;
     border-image: url('../img/thumbnail_alert.png') 3 fill repeat;
 }
 
-.mcui-thumbnail[type="chose"]{
+.mcui-thumbnail[type="chose"] {
     border: 6px solid transparent;
     border-image: url('../img/thumbnail_chose.png') 3 fill repeat;
 }
 
 /* list 列表 */
-.mcui-list{
+.mcui-list {
     margin: 8px 0;
     padding: 0;
     list-style: none;
     background-color: transparent;
 }
 
-.mcui-list a:link,a:visited{
+.mcui-list a:link,
+a:visited {
     color: unset;
     text-decoration: none;
 }
 
-.mcui-list-item{
+.mcui-list-item {
     margin: 0;
     padding: 8px;
     cursor: pointer;
@@ -702,30 +737,30 @@ a.mcui-btn{
     border-image: url('../img/list_light.png') 1 fill repeat;
 }
 
-.mcui-list-item:hover{
+.mcui-list-item:hover {
     border-image: url('../img/list_lighthover.png') 1 fill repeat;
 }
 
-.mcui-list-item:active{
+.mcui-list-item:active {
     border-image: url('../img/list_lightpressed.png') 1 fill repeat;
 }
 
-.mcui-list[type="dark"] .mcui-list-item{
+.mcui-list[type="dark"] .mcui-list-item {
     color: #fff;
     border-image: url('../img/list_dark.png') 1 fill repeat;
 }
 
-.mcui-list[type="dark"] .mcui-list-item:hover{
+.mcui-list[type="dark"] .mcui-list-item:hover {
     border-image: url('../img/list_darkhover.png') 1 fill repeat;
 }
 
-.mcui-list[type="dark"] .mcui-list-item:active{
+.mcui-list[type="dark"] .mcui-list-item:active {
     color: #fff;
     border-image: url('../img/list_darkpressed.png') 1 fill repeat;
 }
 
 /* tab 选项卡 */
-.mcui-tab{
+.mcui-tab {
     display: flex;
     white-space: nowrap;
     margin-bottom: -8px;
@@ -733,7 +768,7 @@ a.mcui-btn{
 
 }
 
-.mcui-tab a{
+.mcui-tab a {
     padding: 5px 8px;
     text-decoration: none;
     border: 8px solid transparent;
@@ -744,33 +779,33 @@ a.mcui-btn{
     text-overflow: ellipsis;
 }
 
-.mcui-tab-full-width a{ 
-    flex-grow: 1!important;
+.mcui-tab-full-width a {
+    flex-grow: 1 !important;
 }
 
-.mcui-tab a.mcui-tab-active{
+.mcui-tab a.mcui-tab-active {
     border-image: url('../img/TabFrontInGame.png') 4 fill repeat;
 }
 
-.mcui-tab a:first-child{
+.mcui-tab a:first-child {
     border-image: url('../img/TabBackInGameLeftMost.png') 4 fill repeat;
 }
 
-.mcui-tab a.mcui-tab-active:first-child{
+.mcui-tab a.mcui-tab-active:first-child {
     border-image: url('../img/TabFrontInGameLeftMost.png') 4 fill repeat;
 }
 
 
-.mcui-tab.mcui-tab-full-width a:last-child{
+.mcui-tab.mcui-tab-full-width a:last-child {
     margin-bottom: 2px;
     border-image: url('../img/RightTabBack.png') 4 fill repeat;
 }
 
-.mcui-tab.mcui-tab-full-width a.mcui-tab-active:last-child{
+.mcui-tab.mcui-tab-full-width a.mcui-tab-active:last-child {
     border-image: url('../img/RightTabFront.png') 4 fill repeat;
 }
 
-.mcui-tab a.mcui-tab-close{
+.mcui-tab a.mcui-tab-close {
     max-width: 56px;
     margin-left: auto;
     margin-bottom: 2px;
@@ -780,7 +815,7 @@ a.mcui-btn{
     position: relative;
 }
 
-.mcui-tab-close::after{
+.mcui-tab-close::after {
     content: '';
     width: 42px;
     height: 42px;
@@ -790,6 +825,6 @@ a.mcui-btn{
     background-image: url('../img/close.png');
 }
 
-.mcui-tab-close:hover{
+.mcui-tab-close:hover {
     border-image: url('../img/RightTabFront.png') 4 fill repeat !important;
 }
