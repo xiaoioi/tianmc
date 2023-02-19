@@ -6,6 +6,7 @@
     <title>Tian</title>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="/css/mcui.css">
     <link rel="stylesheet" type="text/css" href="/css/font.mcui.min.css">
     <link rel="stylesheet" type="text/css" href="/css/zit.css">
@@ -28,6 +29,33 @@
 
 <body style="font-family: " MiSans";" class="mcui-background-wool-auto mdui-theme-layout-auto mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey">
 
+    <!-- loading开始 -->
+    <div id="loading-animation">
+        <div id="loading-animation-center">
+            <div id="loading-animation-center-absolute">
+                <img class="mdui-img-fluid" src="/img/logo.png">
+                <div style="margin-top:100%;" class="mdui-progress">
+                    <div class="mdui-progress-indeterminate"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        ! function() {
+            function e() {
+                setTimeout(() => {
+                    $("#loading-animation").fadeOut(540)
+                }, 500)
+            }
+            window.jQuery ? $(document).ready(() => {
+                e()
+            }) : document.onreadystatechange = (() => {
+                "interactive" === document.readyState && e()
+            })
+        }();
+    </script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.js"></script>
+    
     <!-- 这是Vue的 -->
     <div id="app">
         <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">

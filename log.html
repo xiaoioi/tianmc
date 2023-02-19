@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tian</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/mcui.css">
+    <link rel="stylesheet" type="text/css" href="/css/font.mcui.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/zit.css">
+    <link href="/dist/css/lightgallery.css" rel="stylesheet">
+    <meta http-equiv="Content-Language" contect="zh-CN">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <script src="js/zh-CN.js">
+    </script>
+    <!-- MDUI -->
+    <link rel="stylesheet" href="css/mdui.min.css">
+    <script src="js/mdui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <!-- Vue -->
+    <script src="js/vue.global.prod.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js"></script>
+    <meta charset="utf-8">
+    <title>Tian服务器行为日志公开站</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+        }
+
+        iframe {
+            position: absolute;
+            width: 100%;
+            height: 96.3%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+
+
+<body class="mdui-appbar-inset mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mcui-background-wool-auto mdui-theme-layout-auto mdui-color-800">
+    <!-- 这是Vue的 -->
+    <div id="app">
+        <header class="mdui-appbar mdui-drawer-full-height mdui-appbar-fixed mdui-shadow-0">
+            <div class="mdui-toolbar mdui-color-theme-50">
+                <a class="mdui-btn mdui-btn-icon toolbar-btn" mdui-drawer="{target: '#drawer', swipe: true}">
+                    <i class="mdui-icon material-icons">menu</i>
+                </a>
+                <span class="mdui-typo-title">Tian</span>
+                <a class="mdui-typo-headline" href="index.html"></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <button class="mdui-btn mdui-btn-icon" mdui-menu="{target: '#translate'}">
+                    <i class="mdui-icon material-icons">translate</i>
+                </button>
+
+                <ul class="mdui-menu" id="translate">
+                    <li class="mdui-menu-item">
+                        <a href="javascript:translate.changeLanguage('chinese_simplified');">简体中文</a>
+                    </li>
+                    <li class="mdui-menu-item">
+                        <a href="javascript:translate.changeLanguage('chinese_traditional');">繁體中文</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="mdui-drawer mdui-color-theme-50 mdui-drawer-close mdui-shadow-0" id="drawer">
+            <!-- 顶部图片 -->
+            <p></p>
+            <div>
+                <img :src="config?config.drawer.header:null" style="width: 100%;" :style="{opacity: config?1:0}">
+            </div>
+            <ul class="mdui-list" mdui-collapse="{accordion: true}" style="padding: 8px;">
+                <!-- 侧滑布局 -->
+                <li v-if="config &amp;&amp; config.drawer" v-for="item in config.drawer.items" class="mdui-collapse-item mdui-collapse-item">
+                    <a :href="item.href" class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">{{item.icon}}</i>
+                        <div class="mdui-list-item-content">{{item.name}}</div>
+                        <i v-if="item.subItems" class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                    </a>
+                    <ul v-if="item.subItems" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                        <a v-for="subItem in item.subItems" :href="subItem.href" class="waves-block radius">
+                            <li class="mdui-list-item mdui-ripple" :mdui-dalog="subItem.dialog">{{subItem.name}}</li>
+                        </a>
+                    </ul>
+                </li>
+                <script defer src="https://busuanzi.9420.ltd/js"></script>
+                <span style="position:fixed;bottom:0;" class="mdui-center mdui-typo-body-2-opacity">
+                    <pre>Powered by MDUI & MCUI
+本站总访客数 <span id="busuanzi_site_uv"></span> 人
+本站总访问量 <span id="busuanzi_site_pv"></span> 次                </pre>
+                </span>
+            </ul>
+        </div>
+    </div>
+    <div class="mdui-container">
+        <div class="mdui-col-xs-9 mdui-center">
+            <select class="mdui-select" id="menu"></select>
+        </div>
+        <div class="mdui-col-xs-5 mdui-center">
+            <button class="mdui-btn mdui-color-blue-700" onclick="button()">下载CSV文件</button>
+        </div>
+    </div>
+    <div class="mdui-typo mdui-hidden-md-up">
+        <i style="margin-top:100px;" align="center" class="mdui-icon material-icons mdui-center mdui-typo-display-2-opacity">help_outline</i>
+        <h2 align="center">想在线查看文件？</h2>
+        <h3 align="center">请在电脑打开</h3>
+        <a class="mdui-center" href="http://103.239.247.82:20344" align="center">？用的是电脑？</a>
+    </div>
+    <div class="mdui-hidden-sm-down">
+        <iframe src="" frameborder="0"></iframe>
+    </div>
+    <!-- loading开始 -->
+    <div id="loading-animation">
+        <div id="loading-animation-center">
+            <div id="loading-animation-center-absolute">
+                <img class="mdui-img-fluid" src="/img/logo.png">
+                <div style="margin-top:100%;" class="mdui-progress">
+                    <div class="mdui-progress-indeterminate"></div>
+                </div>
+                <!--<div class="loading_object" id="loading_four"></div>
+                <div class="loading_object" id="loading_three"></div>
+                <div class="loading_object" id="loading_two"></div>
+                <div class="loading_object" id="loading_one"></div>-->
+            </div>
+        </div>
+    </div>
+    <script>
+        ! function() {
+            function e() {
+                setTimeout(() => {
+                    $("#loading-animation").fadeOut(540)
+                }, 500)
+            }
+            window.jQuery ? $(document).ready(() => {
+                e()
+            }) : document.onreadystatechange = (() => {
+                "interactive" === document.readyState && e()
+            })
+        }();
+    </script>
+    <!-- loading 结束 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.js"></script>
+
+    <script>
+        var $ = mdui.$;
+        var inst = new mdui.Select('#menu')
+        var fileName = "null"
+
+        //当前选择文件名
+        $.ajax({
+            method: 'GET',
+            url: 'http://103.239.247.82:20344/filelist',
+            success: (data) => {
+                let sj = JSON.parse(data)
+                let i = 0
+                for (i = 0; sj[i]; i++) {
+                    $('#menu').append(`<option>${sj[i]}</option>`)
+                    inst.handleUpdate()
+                }
+                fileName = sj[i - 1]
+                $('iframe').prop('src', `http://103.239.247.82:20344/file?name=${fileName}`)
+            }
+        })
+
+        //切换
+        $('#menu').on('closed.mdui.select', () => {
+            if (fileName == inst.selectedText) return
+            fileName = inst.selectedText
+            $('iframe').prop('src', `http://103.239.247.82:20344/file?name=${fileName}`)
+        })
+
+        function button() {
+            window.location.href = `http://103.239.247.82:20344/download?name=${fileName}`
+        }
+    </script>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.js"></script>
+<script src="https://res.zvo.cn/translate/translate.js"></script>
+<script src="js/translate.js"></script>
+
+</html>
