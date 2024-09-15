@@ -29,15 +29,7 @@
 
 IP:k2.getmc.cn
 
-端口:15292
-<hr>
-创造服
-
-<img src="//motd.smgoro.top/status_img?host=k1.getmc.cn:15452"></img>
-
-地址：k1.getmc.cn
-
-端口：15452
+端口:1529
 <hr>
 互通服
 
