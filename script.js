@@ -1,3 +1,34 @@
-const $ = mdui.JQ;
-$('.banner-ok').on('click', () => mdui.snackbar(`已清理${Math.random()*1024}${['MB', 'KB', 'TB', 'EB', 'PB', 'B', 'ZB', 'NB', 'BB', 'SB'].sort(() => Math.random() -0.5)[0]}垃圾`));
-//Too troubled to implement the CSS to hide banners.
+var changeElements = [    
+    
+{name: "backup_wizard", action: "modify", attr: "url", value: "https://help.ikunhost.rr.nu/VistaPanel.html"},
+{name: "sitereptile", action: "remove"},   
+{name: "lvephpsel", action: "remove"},    
+{name: "sitereptile", action: "remove"},
+{name: "attracta_seotips", action: "remove"},    
+{name: "cron_jobs", action: "remove"}, 
+{action: "remove", name: "email_filters"},
+{action: "remove", name: "php"},
+{action: "remove", name: "accounts"},
+{action: "remove", name: "ftp_connections"},
+{name: "awstats", action: "remove"},
+{name: "forwarders", action: "remove"},
+{name: "errors", action: "remove"},
+{name: "disk_usage", action: "remove"},
+{name: "ftp_accounts", action: "remove"},
+{name: "file_manager", action: "remove"},
+{name: "change_password", action: "remove"},
+{name: "change_language", action: "remove"},
+{name: "forwarders", action: "remove"},
+{name: "change_password", action: "remove"},
+{name: "createticket", action: "remove"},
+{name: "ShowTickets", action: "remove"},
+{name: "api_shell", action: "remove"},
+{name: "soft_div_icons", action: "remove"},
+{name: "postgresql_databases", action: "remove"},    
+{name: "remote_mysql", action: "remove"},
+{name: "Custom", action: "add", group: "support", link: "https://yourdomain.com", icon: "https://seekicon.com/free-icon-download/database-cloud_1.png", search_text: "custom"},
+{name: "backup_wizard", action: "modify", attr: "url", value: "https://help.xiqo.eu.org"},
+{name: ".域名绑定方法", action: "add", group: "support", link: "https://help.ikunhost.rr.nu/archives/8/", icon: "https://seekicon.com/free-icon-download/database-cloud_1.png", search_text: "custom"},
+{name: "使用Cname解析域名并使用Cf免费CDN与SSL", action: "add", group: "support", link: "https://help.ikunhost.rr.nu/archives/6/", icon: "https://seekicon.com/free-icon-download/database-cloud_1.png", search_text: "custom"}
+];
+document.write ("");
