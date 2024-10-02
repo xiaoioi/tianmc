@@ -26,9 +26,8 @@ var changeElements = [
 {name: "soft_div_icons", action: "remove"},
 {name: "postgresql_databases", action: "remove"},    
 {name: "remote_mysql", action: "remove"},
-{name: "Custom", action: "add", group: "support", link: "https://yourdomain.com", icon: "https://seekicon.com/free-icon-download/database-cloud_1.png", search_text: "custom"},
 {name: "backup_wizard", action: "modify", attr: "url", value: "https://help.xiqo.eu.org"},
-{name: ".域名绑定方法", action: "add", group: "support", link: "https://help.ikunhost.rr.nu/archives/8/", icon: "https://seekicon.com/free-icon-download/database-cloud_1.png", search_text: "custom"},
-{name: "使用Cname解析域名并使用Cf免费CDN与SSL", action: "add", group: "support", link: "https://help.ikunhost.rr.nu/archives/6/", icon: "https://seekicon.com/free-icon-download/database-cloud_1.png", search_text: "custom"}
+{name: ".域名绑定方法", action: "add", group: "support", link: "https://help.ikunhost.rr.nu/archives/8/", icon: "https://seekicon.com/free-icon-download/database-cloud_1.png", search_text: "domain"},
+{name: "使用Cname解析域名并使用Cf免费CDN与SSL", action: "add", group: "support", link: "https://help.ikunhost.rr.nu/archives/6/", icon: "https://seekicon.com/free-icon-download/database-cloud_1.png", search_text: "cname"}
 ];
 document.write ("");
